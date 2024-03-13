@@ -1,0 +1,231 @@
+.post-card {
+  background-color: $white;
+  margin: 0 15px;
+
+  &:hover {
+    .image {
+      img {
+        transform: scale(1.03);
+        @include transition;
+      }
+      &:before {
+        visibility: visible;
+        opacity: 1;
+        @include transition;
+      }
+      .circle-btn-wrapper {
+        background-color: rgba(0, 0, 0, 0.50);
+        @include transition;
+      }
+      .circle-btn {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        visibility: visible;
+        opacity: 1;
+        @include transition;
+      }
+    }
+  }
+  .image {
+    overflow: hidden;
+    position: relative;
+    height: 236px;
+
+    img {
+      transform: scale(1.0);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @include transition;
+    }
+    .circle-btn-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      @include transition;
+    }
+    .circle-btn {
+      width: 72px;
+      height: 72px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $primary-color;
+      color: $white;
+      font-size: 24px;
+      text-decoration: none;
+      position: absolute;
+      top: 70%;
+      left: 20%;
+      transform: translate(-50%, -50%) scale(0.3);
+      opacity: 0;
+      visibility: hidden;
+      @include transition;
+      z-index: 2;
+
+      @include md {
+        width: 60px;
+        height: 60px;
+        font-size: 22px;
+      }
+      @include sm {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+      }
+      i {
+        transform: rotate(-45deg);
+        @include transition;
+      }
+
+      &:hover {
+        background-color: $blue-color;
+        @include transition;
+
+        i {
+          transform: rotate(0deg);
+          @include transition
+        }
+      }
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    border: 1px solid $gray-200;
+    gap: 40px;
+    @include transition;
+    @include sm{
+      padding: 24px;
+    }
+      .title {
+        height: 60px;
+        overflow: hidden;
+        font-family: $heading-font;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 30px;
+        margin-bottom: 0;
+
+        @include sm {
+          font-size: 20px;
+          line-height: 28px;
+          height: unset;
+          overflow: visible;
+        }
+
+       a {
+         &:hover {
+           color: $primary-color;
+           @include transition;
+         }
+       }
+      }
+      .post-content {
+        p {
+          font-family: $body-font;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 30px;
+          color: $gray-800;
+          margin-bottom: 0;
+        }
+      }
+  }
+  .post-meta {
+    display: inline-flex;
+    gap: 20px 30px;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include sm {
+      gap: 8px 30px;
+    }
+
+    .single-post-meta {
+      color: #8f939b;
+      font-size: 16px;
+      line-height: 30px;
+      font-weight: 400;
+      font-family: $body-font;
+      margin: 0;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-shrink: 0;
+
+      i {
+        font-family: $font-awesome;
+        font-size: 14px;
+        font-weight: 900;
+        color: $primary-color;
+        @include transition;
+
+      }
+
+      a {
+        display: flex;
+        gap: 7px;
+        align-items: center;
+        flex-shrink: 0;
+        color: #8f939b;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+
+// Post Card 1
+
+.post-card {
+  &.style-1 {
+    .post-meta {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-color: $primary-color;
+
+      .single-post-meta {
+        color: $white;
+        padding: 9px 20px;
+
+        i {
+          color: $white;
+        }
+      }
+    }
+    .btn-wrapper {
+      .theme-btn {
+        color: $black;
+        background-color: $white;
+        border: 1px solid $primary-color;
+        @include transition;
+
+        i {
+          color: $primary-color;
+          @include transition;
+        }
+
+        &:hover {
+          color: $white;
+          background-color: $primary-color;
+          @include transition;
+
+          i {
+            color: $white;
+            @include transition;
+          }
+        }
+      }
+    }
+  }
+}

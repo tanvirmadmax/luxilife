@@ -1,0 +1,52 @@
+.testimonial-card {
+  &.style-4 {
+    width: 850px;
+    align-items: start;
+    gap: 40px;
+    padding: 40px 137px;
+    background-color: $white;
+    margin: 0 15px;
+
+    @include sm {
+      padding: 40px 30px;
+      width: 350px;
+    }
+    @include md {
+      width: 750px;
+    }
+
+    .user-info-wrapper {
+      flex-direction: row;
+      gap: 25px;
+      align-items: center;
+      width: 100%;
+      justify-content: center;
+
+      .user-img{
+        width: 85px;
+        height: 85px;
+        overflow: hidden;
+        border-radius: 50%;
+      }
+      .user-meta {
+        text-align: left;
+      }
+    }
+
+    .content-wrapper{
+      text-align: center;
+      .comma-icon{
+        i{
+          font-family: $font-awesome;
+          font-size: 48px;
+          line-height: 48px;
+          color: $white;
+          -webkit-text-stroke: 1px $primary-color;
+        }
+      }
+      .description{
+        margin-top: 20px;
+      }
+    }
+  }
+}

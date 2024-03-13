@@ -1,0 +1,416 @@
+.feature-area {
+    &.style-5 {
+        @include sm {
+            padding: 80px 0;
+        }
+        @include md {
+            padding: 100px 0;
+        }
+    }
+}
+.about-us-area {
+    &.style-3 {
+        position: relative;
+        padding-bottom: 57px;
+        z-index: 3;
+
+        @include md {
+            padding-bottom: 0;
+        }
+        @include sm {
+            padding-bottom: 0;
+        }
+
+        .section-title{
+            .title{
+                br{
+                    @include xl{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.section-bg-frame {
+  position: relative;
+  z-index: 3;
+
+    img {
+        position: absolute;
+        right: -8px;
+        top: -442px;
+        flex-shrink: 0;
+        z-index: -1;
+        opacity: 0.1;
+
+        @include sm {
+            right: 0;
+        }
+        @include md {
+            right: 0;
+        }
+        @include lg {
+            right: 0;
+        }
+        @include xl {
+            right: 0;
+        }
+        
+    }
+}
+
+.latest-service-area {
+    position: relative;
+    z-index: 2;
+
+    @include md {
+        padding: 100px 0;
+    }
+    @include sm {
+        padding: 80px 0;
+    }
+
+    .section-title {
+        margin-bottom: 40px;
+    }
+}
+
+
+// Project Area
+.project-title-area{
+    &.style-2 {
+        position: relative;
+        z-index: 2;
+        padding-bottom: 260px;
+        @include md {
+            padding-top: 100px;
+        }
+        @include sm {
+            padding-top: 80px;
+        }
+
+        .section-title {
+            margin-bottom: 40px;
+            @include sm{
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .portfolio-slider-disable{
+        position: relative;
+        z-index: 10;
+    }
+}
+.project-slider-area {
+    position: relative;
+    margin-top: -260px;
+
+    .project-card-slider {
+        z-index: 2;
+
+        button {
+            @include sm {
+                width: 30px;
+            }
+        }
+    }
+}
+
+// section background frame style
+.section-bg-frame {
+    &.style-2 {
+        z-index: 1;
+        img {
+            top: 160px;
+            left: 17px;
+            flex-shrink: 0;
+            opacity: 0.2;
+            z-index: -1;
+
+            @include sm {
+                left: 0;
+            }
+            @include md {
+                left: 0;
+            }
+            @include lg {
+                left: 0;
+            }
+            @include xl {
+                left: 0;
+            }
+        }
+    }
+}
+
+// Our Team Member
+.our-team-area{
+    &.style-1{
+        position: relative;
+        padding: 120px 0;
+
+        @include md {
+            padding: 100px 0;
+        }
+        @include sm {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 2;
+            @include sm{
+                margin-bottom: 20px;
+            }
+        }
+    
+        .team-member-gallery-area{
+            position: relative;
+            z-index: 2;
+
+            .nav-tab{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+
+                @include xs {
+                    gap: 10px;
+                }
+    
+                li{
+                    height: 237px;
+                    cursor: pointer;
+                    &.active{
+                        border: 5px solid $primary-color;
+                        @include transition;
+                    }
+    
+                    .title{
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        img{
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            top: 0;
+                            left: 0;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+            .member-img{
+                height: 237px;
+                width: 100%;
+                position: relative;
+    
+                img{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    object-fit: cover;
+                }
+            }
+        }
+        .skill-progress-area{
+            position: relative;
+            z-index: 2;
+            background-color: $white;
+            padding: 40px;
+            margin-left: 2px;
+            @include transition;
+            @include sm {
+                margin-left: 0;
+                padding: 30px;
+            }
+    
+            .content{
+                margin-bottom: 29px;
+                .name{
+                    font-family: $heading-font;
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 30px;
+                margin-bottom: 10px;
+                }
+                .designation{
+                    font-family: $body-font;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 30px;
+                    color: $gray-800;
+                }
+            }
+            .skill-progressbar-wrapper {
+                gap: 16px;
+            }
+            .counter-card{
+                margin-top: 52px;
+                .box {
+                    background-image: repeating-linear-gradient(-3deg, $primary-color, $primary-color 14px, transparent 14px, transparent 25px, $primary-color 25px), repeating-linear-gradient(87deg, $primary-color, $primary-color 14px, transparent 14px, transparent 25px, $primary-color 25px), repeating-linear-gradient(177deg, $primary-color, $primary-color 14px, transparent 14px, transparent 25px, $primary-color 25px), repeating-linear-gradient(267deg, $primary-color, $primary-color 14px, transparent 14px, transparent 25px, $primary-color 25px);
+                    background-size: 2px calc(100% + 25.03px), calc(100% + 25.03px) 2px, 2px calc(100% + 25.03px) , calc(100% + 25.03px) 2px;
+                    background-position: 0 0, 0 0, 100% 0, 0 100%;
+                    background-repeat: no-repeat;
+                    animation: borderAnimation 1s infinite linear;
+                    display: inline-flex;
+                }
+                @keyframes borderAnimation {
+                    from { background-position: 0 0, -25.03px 0, 100% -25.03px, 0 100%; }
+                    to { background-position: 0 -25.03px, 0 0, 100% 0, -25.03px 100%; }
+                }
+                   
+                .review-object{
+                   padding: 20px;
+                   padding-bottom: 13px;
+                   display: flex;
+                   align-items: center;
+                   gap: 14px;
+
+    
+                    .number{
+                        font-size: 48px;
+                        line-height: 60px;
+                        width: 85px;
+                        text-align: center;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        @include sm {
+                            font-size: 40px;
+                        }
+                    }
+                    .title{
+                        font-family: $heading-font;
+                        font-size: 24px;
+                        font-weight: 700;
+                        line-height: 30px;
+                        color: $black;
+                        @include sm {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Testimonial
+.testimonial-slider-area{
+    &.style-4{
+        overflow: hidden;
+
+       .section-title {
+        position: relative;
+        z-index: 2;
+        @include sm{
+            margin-bottom: 10px;
+        }
+       }
+       .slider-area-wrapper {
+        position: relative;
+        z-index: 2;
+       }
+    }
+}
+
+.brand-slider-area {
+    &.style-1 {
+        @include md {
+            padding: 100px 0;
+        }
+        @include sm {
+            padding: 80px 0;
+        }
+    }
+}
+
+// Price Area
+.price-area{
+    &.style-1 {
+        @include md {
+            padding-bottom: 100px;
+        }
+        @include sm {
+            padding-bottom: 80px;
+        }
+    }
+    .container{
+        position: relative;
+        z-index: 20;
+    }
+}
+
+// Counter UP
+.counter-up-area{
+    &.style-3{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        padding: 296px 0 80px;
+        margin-top: -236px;
+        z-index: 1;
+        @include md {
+            padding: 100px 0;
+            margin-top: 0;
+        }
+        @include sm {
+            padding: 80px 0;
+            margin-top: 0;
+        }
+
+        .overlay{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: $black;
+            opacity: 0.9;
+            z-index: -1;
+        }
+    }
+}
+
+
+.latest-posts-area {
+    &.style-4 {
+
+        @include md {
+            padding: 100px 0;
+        }
+        @include sm {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+
+// Img Gallery
+.img-gallery-area{
+    .img-card{
+        width: 100%;
+        height: 250px;
+        position: relative;
+
+        img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+    }
+}

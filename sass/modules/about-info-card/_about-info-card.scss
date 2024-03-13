@@ -1,0 +1,145 @@
+.about-info-card {
+
+  .btn-wrapper {
+    margin-top: 40px;
+  }
+  &.style-1 {
+    margin-top: 72px;
+    margin-left: 3px;
+
+    @include lg {
+      margin-top: 50px;
+    }
+    @include md {
+      margin-top: 50px;
+    }
+
+    @include sm {
+      margin-top: 40px;
+    }
+  }
+  &.style-3 {
+    margin-top: 117px;
+
+    @include lg {
+      margin-top: 0;
+    }
+    @include md {
+      margin-top: 70px;
+    }
+    @include sm {
+      margin-top: 50px;
+    }
+
+    .about-info-content {
+      gap: 10px;
+
+      .section-title {
+        gap: 0;
+      }
+
+      .list-item-wrapper {
+        gap: 30px;
+
+      }
+    }
+    .btn-wrapper {
+      margin-top: 44px;
+    }
+  }
+  &.style-4 {
+    margin-top: 103px;
+    margin-right: 54px;
+    @include xl{
+      margin: 0;
+    }
+    @include lg {
+      margin-right: 0;
+      margin-top: 0;
+    }
+    @include md {
+      margin: 0;
+    }
+    @include sm {
+      margin: 0;
+    }
+    .btn-wrapper{
+      @include rmaxwd(1399){
+        margin-top:  20px;
+      }
+    }
+    .about-info-content {
+      gap: 20px;
+
+      @include lg {
+        gap: 0;
+      }
+
+      @include md {
+        gap: 10px;
+      }
+
+      @include sm {
+        gap: 10px;
+      }
+
+      .section-title {
+        margin-bottom: 0;
+        gap: 0;
+
+        .title {
+          margin-bottom: 20px;
+
+          br {
+            @include xl {
+              display: none;
+            }
+            @include lg {
+              display: none;
+            }
+            @include md {
+              display: none;
+            }
+            @include sm {
+              display: none;
+            }
+            @include md {
+              padding-right: 86px;
+            }
+            @include sm {
+              padding-right: 86px;
+            }
+          }
+        }
+
+        .desc {
+          margin-bottom: 0;
+        }
+
+      }
+
+      .btn-wrapper {
+        margin-top: 30px;
+      }
+    }
+
+    .about-info-content {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      @include rmaxwd(1399){
+        gap: 10px;
+      }
+
+      .section-title {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 0;
+
+
+      }
+
+    }
+  }
+
+}

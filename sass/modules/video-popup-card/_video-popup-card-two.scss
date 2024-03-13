@@ -1,0 +1,76 @@
+.video-popup-card {
+    &.style-2 {
+        position: relative;
+
+        .overlay {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.51) 100%);
+        }
+
+        .video-popup-image {
+            img {
+                @include sm {
+                    height: 100%;
+                }
+            }
+        }
+
+        .video-popup-btn {
+            border-radius: 50%;
+            padding: 11px;
+            border: 3px solid $primary-color;
+            a {
+                width: 162px;
+                height: 162px;
+                background-color: $primary-color;
+              
+                @include xl {
+                    width: 120px;
+                    height: 120px;
+                }
+                @include lg {
+                    width: 120px;
+                    height: 120px;
+                }
+            
+                @include md {
+                    width: 70px;
+                    height: 70px;
+                }
+                @include sm {
+                    width: 70px;
+                    height: 70px;
+                }
+
+                i {
+                    color: $white;
+                    font-size: 53px;
+                    margin-left: 12px;
+
+                    @include sm {
+                        font-size: 24px;
+                        margin-left: 6px;
+                    }
+                    @include md {
+                        font-size: 24px;
+                        margin-left: 6px;
+                    }
+                    @include lg {
+                        font-size: 40px;
+                    }
+                    @include xl {
+                        font-size: 40px;
+                    }
+                        
+
+                    
+                }
+
+            }
+        }
+    }
+}

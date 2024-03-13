@@ -1,0 +1,63 @@
+.about-image-card {
+    &.style-3 {
+        .main-img-inner {
+            position: relative;
+
+            img {
+               @include lg {
+                width: 75%;
+               }
+               @include md {
+                width: 60%;
+               }
+               @include sm {
+                width: 100%;
+               }
+            }
+
+            .top-image {
+                position: absolute;
+                right: 38px;
+                bottom: -60px;
+
+                @include lg {
+                    right: 0;
+                    bottom: -80px;
+                }
+                @include md {
+                    right: unset;
+                    left: 100px;
+                    bottom: -80px;
+                }
+                @include sm {
+                    right: 0;
+                }
+                @include xs {
+                    right: 0;
+                    left: unset;
+                    bottom: -70px;
+                    text-align: end;
+                }
+                &:hover{
+                    img{
+                        transform: scale(1.03);
+                    }
+                }
+                img {
+                    transform: scale(1.0);
+                    @include transition;
+                    @include lg {
+                        width: 90%;
+                    }
+                    @include md {
+                        width: 100%;
+                    }
+                    @include sm {
+                        width: 70%;
+                    }
+                   
+                }
+            }
+        }
+    }
+}

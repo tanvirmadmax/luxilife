@@ -1,0 +1,80 @@
+.post-card {
+  &.style-4 {
+    flex-direction: column;
+    gap: 26px;
+    @include lg {
+      margin: 0 10px;
+    }
+
+    &:hover {
+      .post-meta {
+        .single-post-meta {
+          i {
+            color: $primary-color;
+            @include transition;
+          }
+        }
+      }
+    }
+
+    .image {
+      height: 433px;
+
+      @include xl {
+        height: 300px;
+      }
+      @include lg {
+        height: 300px;
+      }
+      @include md {
+        height: 300px;
+      }
+      @include sm {
+        height: 300px;
+      }
+    }
+    .content {
+      padding: 20px 40px 40px;
+      gap: 20px;
+      border: none;
+      background-color: $white;
+      @include xl {
+        padding: 20px 30px 30px;
+      }
+      @include lg {
+        padding: 20px;
+      }
+      @include md {
+        padding: 20px;
+      }
+      @include sm {
+        gap: 20px;
+      }
+      @include xs {
+        padding: 30px;
+      }
+
+      .title {
+        margin-bottom: 20px;
+        @include lg {
+          margin-bottom: 5px;
+        }
+        @include md {
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .post-meta {
+
+      .single-post-meta {
+        i {
+          color: $gray-800;
+          @include transition;
+        }
+        @include lg {
+          gap: 5px;
+        }
+      }
+    }
+  }
+}

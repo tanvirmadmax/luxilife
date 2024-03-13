@@ -1,0 +1,125 @@
+body {
+  &.admin-bar {
+    .header-area {
+      &.style-7 {
+        top: 30px;
+      }
+    }
+  }
+}
+
+
+.header-area {
+  &.style-7 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+
+
+    .search-btn-with-btn {
+      gap: 40px;
+      @include xl{
+        gap: 0;
+      }
+      .search-btn-wrapper {
+        .search-btn {
+          background-color: transparent;
+          color: $white;
+        }
+      }
+    }
+
+    .mobile-menu-bar{
+      a{
+        i{
+          @include rmaxwd(991){
+            color: $white;
+          }
+        }
+      }
+    }
+
+    // Start Header Nav
+    .header-menu-area {
+      .main-menu{
+        @include xl{
+          margin-left: 38px;
+        }
+      }
+      &.sticky_menu {
+        .mobile-menu-bar{
+          a{
+            i{
+              @include rmaxwd(991){
+                color: $black;
+              }
+            }
+          }
+        }
+        .search-btn-with-btn {
+          .search-btn-wrapper {
+            .search-btn {
+              color: $black;
+            }
+          }
+        }
+
+        .main-menu {
+          ul {
+            li {
+              a {
+                color: $black;
+                @include transition;
+                padding: 27px 24px;
+
+                &:hover {
+                  color: $primary-color;
+                }
+              }
+              ul {
+                li {
+                  a {
+                    padding: 10px 20px;
+
+                    &:hover {
+                      color: $white;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .main-menu {
+        ul {
+          li {
+            a {
+              color: $white;
+              @include transition;
+              padding: 51px 24px;
+
+              &:hover {
+                color: $primary-color;
+              }
+            }
+            ul {
+              li {
+                a {
+                  padding: 10px 20px;
+                  color: $black;
+
+                  &:hover {
+                    color: $white;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

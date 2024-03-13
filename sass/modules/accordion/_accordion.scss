@@ -1,0 +1,74 @@
+.accordion-wrapper {
+  .accordion-list-item {
+    .accordion-head {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      padding: 30px 0;
+      position: relative;
+      justify-content: space-between;
+      border-bottom: 1px solid transparent;
+      &:after {
+        color: $black;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        flex-shrink: 0;
+        content: "\f068";
+        font-family: $font-awesome;
+        font-weight: 500;
+      }
+      &.collapsed {
+        border-color: $gray-200;
+        &:after {
+          color: $black;
+          font-size: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 30px;
+          height: 30px;
+          flex-shrink: 0;
+          position: relative;
+          content: "\2b";
+          font-family: $font-awesome;
+          font-weight: 500;
+        }
+      }
+
+      .accordion-title {
+        font-family: $heading-font;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 30px;
+        color: $black;
+        margin-bottom: 0;
+        @include sm{
+          font-size: 18px;
+        }
+      }
+    }
+    &:last-child {
+      .accordion-head{
+        border-bottom: transparent;
+      }
+    }
+    .accordion-item-body {
+      padding-bottom: 15px;
+      background-color: $white;
+      padding: 30px;
+      @include transition;
+
+      p {
+        font-size: 16px;
+        color: $gray;
+        font-weight: 400;
+        line-height: 29px;
+        margin: 0;
+      }
+    }
+  }
+}

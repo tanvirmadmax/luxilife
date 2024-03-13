@@ -1,0 +1,38 @@
+.icon-card{
+    &.style-5{
+        display: flex;
+        justify-content: space-between;
+        margin-right: 66px;
+        @include lg {
+            margin-right: 0;
+        }
+        @include sm {
+            margin-right: 0;
+        }
+        @include md {
+            justify-content: flex-start;
+            gap: 40px;
+        }
+        @include sm {
+            justify-content: flex-start;
+            gap: 40px;
+        }
+        @include xs {
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .icon-card-inner{
+            .content{
+                padding-right: 20px;
+                .info-title{
+                    color: $white;
+                }
+                .desc{
+                    color: $white;
+                }
+            }
+            
+        }
+    }
+}

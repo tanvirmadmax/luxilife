@@ -1,0 +1,93 @@
+.testimonial-card{
+  padding: 40px;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &.style-1 {
+    width: 410px;
+    gap: 14px;
+
+    @include lg {
+      width: 540px;
+    }
+    @include md {
+      width: auto;
+    }
+    @include sm {
+      width: auto;
+    }
+
+    @include sm {
+      width: 100%;
+    }
+
+    .user-info-wrapper {
+      gap: 22px;
+    }
+  }
+
+  .user-info-wrapper {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    flex-shrink: 0;
+
+    .user-img{
+      display: flex;
+      justify-content: center;
+      align-self: flex-start;
+      flex-shrink: 0;
+      width: 76px;
+      height: 76px;
+      position: relative;
+
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        aspect-ratio: 1/1;
+      }
+    }
+    .user-meta {
+
+      .name{
+        font-family: $heading-font;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 30px;
+        margin-bottom: 0;
+      }
+      .designation{
+        font-family: $body-font;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 30px;
+        color: $gray-800;
+        margin: 4px 0;
+      }
+      .rating-icon{
+        font-family: $font-awesome;
+        font-size: 14px;
+        font-weight: 900;
+        color: #FF9205;
+        margin-bottom: 0;
+      }
+    }
+  }
+  .content-wrapper {
+
+    .description{
+      font-family: $body-font;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 30px;
+      color: $gray-800;
+      margin-bottom: 0;
+    }
+  }
+}

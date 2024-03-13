@@ -1,0 +1,82 @@
+.testimonial-card {
+    &.style-5 {
+      background-color: $black;
+      align-items: start;
+      gap: 50px;
+      width: 630px;
+      margin: 0 15px;
+
+      @include md{
+        width: auto;
+      }
+      @include sm{
+        width: auto;
+        gap: 30px;
+      }
+      @include xs{
+        margin: 0 8px;
+        padding: 25px;
+      }
+      &:hover{
+        .content-wrapper{
+          .comma-icon {
+            i{
+              color: $primary-color;
+              @include transition;
+            }
+          }
+        }
+      }
+      .user-info-wrapper {
+        flex-direction: row;
+        gap: 25px;
+        margin-bottom: 20px;
+        @include sm{
+          gap: 18px;
+        }
+        .user-img{
+          width: 85px;
+          height: 85px;
+          overflow: hidden;
+        }
+        .user-meta {
+          text-align: left;
+  
+          .name{
+            color: $white;
+          }
+          .designation{
+            color: $white;
+            margin-bottom: 10px;
+          }
+          .designation{
+            margin: 0;
+          }
+        }
+      }
+  
+      .content-wrapper{
+        .comma-icon{
+          i{
+            font-family: $font-awesome;
+            font-size: 48px;
+            line-height: 48px;
+            color: $black;
+            -webkit-text-stroke: 1px $primary-color;
+            @include transition;
+            @include xs{
+              font-size: 36px;
+              line-height: 36px;
+            }
+          }
+        }
+        .description{
+          color: $white;
+          margin-top: 20px;
+          @include xs{
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }

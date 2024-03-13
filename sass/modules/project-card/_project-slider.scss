@@ -1,0 +1,36 @@
+.portfolio-slider {
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+  margin-top: -320px;
+
+  ul {
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;
+    align-items: center;
+    margin: auto;
+    padding-left: 0;
+    width: 237px;
+
+    li {
+      line-height: 0;
+
+      &.slick-active {
+        button {
+          background-color: $primary-color;
+        }
+      }
+      button {
+        width: 105px;
+        height: 9px;
+        font-size: 0;
+        line-height: 0;
+        background-color: $white;
+        border-radius: 40px;
+
+      }
+    }
+  }
+
+}

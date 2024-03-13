@@ -1,0 +1,47 @@
+.info-card {
+    &.style-3 {
+        padding: 0 40px 40px 40px;
+        border: 1px solid $gray-200;
+        @include rmaxwd(1399){
+            padding: 24px;
+            padding-top: 0;
+        }
+        @include sm{
+            padding-bottom: 30px;
+        }
+        .title-wrapper {
+            align-items: center;
+            padding-bottom: 20px;
+            @include xl{
+                padding-bottom: 16px;
+            }
+
+            .icon {
+                background-color: $primary-color;
+                width: 80px;
+                height: 80px;
+                align-items: center;
+                justify-content: center;
+                margin-top: -1px;
+                padding: 8px;
+                flex-shrink: 0;
+
+                @include xs {
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+            .counter-number {
+                font-size: 48px;
+                font-weight: 700;
+                line-height: 60px;
+                color: $black;
+            }
+        }
+
+        .content {
+            text-align: center;
+            justify-content: center;
+        }
+    }
+}

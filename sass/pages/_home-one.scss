@@ -1,0 +1,683 @@
+// Hero Section Style-1
+.hero-section {
+  &.style-1 {
+
+    .hero-content-area {
+      // background-image: url(../images/hero-section/v-1/bg.png);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      width: 100%;
+      text-align: right;
+
+      @include xl {
+        display: flex;
+        align-items: center;
+      }
+
+      .bg-dark-effect {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(91deg, #000 0.47%, rgba(0, 0, 0, 0.00) 99.58%);
+      }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 5;
+      display: inline-block;
+      text-align: left;
+      padding: 200px 80px 191px 114px;
+
+      @include xs {
+        padding: 100px 12px !important;
+      }
+
+      @include sm {
+        padding: 100px 50px;
+      }
+
+      @include md {
+        padding: 160px 80px 140px 40px;
+      }
+
+      @include lg {
+        padding: 120px 50px;
+        display: block;
+      }
+
+      @include xl {
+        padding: 0 46px;
+      }
+
+      .title {
+        font-family: $heading-font;
+        font-size: 86px;
+        line-height: 99px;
+        font-weight: 700;
+        color: $white;
+
+        @include sm {
+          font-size: 44px;
+          line-height: normal;
+        }
+
+        @include md {
+          font-size: 72px;
+          line-height: 88px;
+        }
+
+        @include lg {
+          font-size: 60px;
+          line-height: 82px;
+        }
+
+        @include xl {
+          font-size: 72px;
+          line-height: 82px;
+        }
+      }
+
+      .desc {
+        font-size: 16px;
+        line-height: 30px;
+        margin: 22px 0 37px;
+        color: $white;
+        padding-right: 170px;
+
+        @include xs {
+          padding-right: 55px !important;
+        }
+
+        @include sm {
+          padding-right: 100px;
+        }
+
+        @include lg {
+          width: 480px;
+          padding-right: 0;
+        }
+
+        @include xl {
+          padding-right: 120px;
+        }
+      }
+
+      .hero-content-bottom {
+        display: flex;
+        align-items: center;
+
+        @include sm {
+          flex-direction: column-reverse;
+          align-items: flex-start;
+          gap: 50px;
+        }
+
+        @include lg {
+          flex-direction: column-reverse;
+          align-items: flex-start;
+          gap: 40px;
+        }
+
+
+        .trusted-clients-wrapper {
+          display: flex;
+        }
+
+        .trusted-clients {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-left: 66px;
+          flex-shrink: 0;
+
+          @include sm {
+            margin-left: 0;
+          }
+
+          @include lg {
+            margin-left: 0;
+          }
+          .client-thumb {
+            position: relative;
+            width: 54px;
+            height: 54px;
+            border: 2px solid $white;
+            border-radius: 50%;
+            margin-left: -15px;
+
+            &:first-child {
+              @include sm {
+                margin-left: 0;
+              }
+              @include md {
+                margin-left: 0;
+              }
+              @include lg {
+                margin-left: 0;
+              }
+            }
+          }
+
+          img {
+           position: absolute;
+           width: 100%;
+           height: 100%;
+           border-radius: 50%;
+           object-fit: cover;
+          }
+        }
+
+        .member-count {
+          margin-left: 18px;
+
+          h4 {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 41.6px;
+            text-transform: capitalize;
+            color: $white;
+          }
+
+          span {
+            font-size: 16px;
+            line-height: 30px;
+            color: $white;
+          }
+        }
+      }
+    }
+
+    .hero-gallery-area {
+      padding: 59px 0 46px 52px;
+
+      @include xs {
+        padding: 80px 0px !important;
+      }
+      @include sm {
+        padding: 80px 0px 80px 18px;
+      }
+
+      @include md {
+        padding: 100px 0px 100px 30px;
+      }
+
+      @include lg {
+        padding: 120px 0  120px 40px;
+      }
+
+      @include xl {
+        padding: 76px 0 76px 50px;
+      }
+      .section-title {
+        @include lg {
+          margin-bottom: 0;
+        }
+        @include md {
+          margin-bottom: 0;
+        }
+        @include sm {
+          margin-bottom: 0;
+        }
+      }
+
+      h4 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 30px;
+        color: #000000;
+        margin-bottom: 30px;
+
+        @include lg {
+          font-size: 28px;
+        }
+
+        @include md {
+          font-size: 28px;
+        }
+
+        @include sm {
+          margin-bottom: 20px;
+        }
+      }
+
+      .nav-tab {
+        display: flex;
+        gap: 20px;
+
+        @include sm {
+          gap: 8px;
+        }
+
+        .theme-btn {
+          background: none;
+          color: $black;
+          padding: 9px 20px;
+          text-transform: none !important;
+          font-weight: 400;
+          font-family: $body-font;
+          letter-spacing: initial;
+          @include transition;
+
+          &:hover {
+            background-color: $primary-color;
+            color: $white;
+            @include transition;
+          }
+
+          &.active {
+            background: $primary-color;
+            border: 1px solid $primary-color;
+            color: $white;
+          }
+        }
+      }
+    }
+
+    .hero-gallery-slider {
+      padding: 30px 0 60px;
+      position: relative;
+
+      .slick-arrow {
+        position: absolute;
+        bottom: -3px;
+        width: 44px;
+        height: 44px;
+        background: none;
+        border: 1px solid #E3E3E3;
+        transition: all 0.5s;
+
+        &:hover {
+          background-color: $primary-color;
+          border: 1px solid $primary-color;
+         
+          i {
+            color: $white;
+          }
+        }
+
+        i {
+          color: #23262D;
+          font-size: 16px;
+          font-weight: 900;
+          font-family: Font Awesome 6 Free;
+          @include transition;
+
+        }
+      }
+
+      .slick-arrow.btn-next {
+        margin-left: 59px;
+      }
+
+      .slick-track {
+        display: block;
+
+        .slick-item {
+          margin-right: 30px;
+          width: 300px;
+          height: 470px;
+          position: relative;
+
+          &:hover{
+            .image{
+              img{
+                transform: scale(1.03);
+                @include transition;
+              }
+            }
+            .theme-btn{
+              transform: translateY(0%);
+              opacity: 1;
+              @include transition;
+            }
+          }
+
+          @include sm {
+            margin-right: 20px;
+
+          }
+
+          .image{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+
+            img {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              transform: scale(1.01);
+              @include transition;
+            }
+          }
+
+          .theme-btn{
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            transform: translateY(100%);
+            opacity: 0;
+            @include transition;
+          }
+        }
+      }
+    }
+  }
+}
+
+// About Us Area
+.about-us-area {
+  &.style-1 {
+    padding-top: 120px;
+    padding-bottom: 149px;
+
+    @include md {
+      padding: 100px 0;
+    }
+
+    @include sm {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      @include sm {
+        gap: 0;
+      }
+      .title{
+        @include xl{
+          margin-bottom: 10px;
+          
+        }
+        br{
+          @include xl{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Feature Area
+.feature-area {
+  &.style-1 {
+    padding: 120px 0;
+    background-repeat: no-repeat;
+    background-position: 70px 0px;
+    background-size: contain;
+    position: relative;
+
+    @include md {
+      padding: 100px 0;
+    }
+
+    @include sm {
+      padding: 80px 0;
+    }
+
+
+    .section-title {
+      margin-bottom: 84px;
+
+      @include xl {
+        margin-bottom: 60px;
+      }
+      @include lg {
+        margin-bottom: 60px;
+      }
+      @include md {
+        margin-bottom: 60px;
+      }
+
+      @include sm {
+        margin-bottom: 40px;
+      }
+      .short-title-wrapper{
+        margin-top: -7px;
+      }
+      .title {
+        margin-bottom: 10px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+// Portfolio Section
+.portfolio-section {
+  &.style-1 {
+    padding: 120px 0;
+
+    @include md {
+      padding: 100px 0;
+    }
+
+    @include sm {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      margin-bottom: 54px;
+
+      @include sm {
+        margin-bottom: 30px;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .title {
+        margin-bottom: 0;
+      }
+      .sec-desc {
+        margin-right: 10px;
+        margin-bottom:  10px;
+      }
+    }
+  }
+}
+
+// Counter Up Area
+.counter-up-area {
+  &.style-1 {
+    margin: 0 80px;
+
+    @include md {
+      padding: 40px;
+      margin: 0 40px;
+    }
+
+    @include sm {
+      margin: 0 20px;
+      padding: 40px;
+    }
+
+    .counter-item {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      padding: 0 107px;
+      height: 100%;
+      @include xl {
+        padding: 0;
+      }
+      @include lg {
+        padding: 0;
+      }
+      @include md {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 40px;
+        grid-gap: 40px;
+      }
+
+      @include sm {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 40px;
+        grid-gap: 40px;
+      }
+
+      @include xs {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 0;
+      }
+    }
+
+  }
+}
+
+.video-popup-area {
+  &.style-1 {
+    margin: 0 80px;
+
+    @include sm {
+      margin: 0 20px;
+    }
+    @include md{
+      margin: 0 40px;
+    }
+  }
+}
+
+.testimonial-slider-area {
+  &.style-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    overflow: hidden;
+    padding-top: 120px;
+    padding-bottom: 100px;
+
+    @include md {
+      padding: 100px 0;
+    }
+
+    @include sm {
+      padding: 80px 0;
+      gap: 80px;
+    }
+
+
+    .section-title {
+
+      .title {
+        margin-bottom: 0;
+      }
+
+      .slider-nav-btn-wrapper {
+        margin-top: 50px;
+        @include rmaxwd(991) {
+          margin-top: 30px;
+        }
+        a {
+          filter: drop-shadow(0px 6px 50px rgba(37, 37, 37, 0.05));
+          box-shadow: none;
+          width: 60px;
+          height: 60px;
+          font-size: 17px;
+          background-color: rgba(217, 161, 76, 0.1);
+          color: $primary-color;
+          @include transition;
+
+          &:hover {
+            background-color: $primary-color;
+            color: $white;
+            @include transition;
+          }
+        }
+      }
+    }
+  }
+}
+
+// latest-posts-area
+.latest-posts-area {
+  &.style-1 {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    @include sm {
+      padding: 80px 0;
+    }
+
+    @include md {
+      padding: 100px 0;
+    }
+
+    .post_card_slider_wrapper {
+      margin-left: 15px;
+      margin-top: -4px;
+    }
+
+    .section-title {
+      margin-bottom: 60px;
+      @include sm {
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .title {
+        margin-bottom: 0;
+      }
+
+      .slider-nav-btn-wrapper {
+        a {
+          filter: drop-shadow(0px 6px 50px rgba(37, 37, 37, 0.05));
+          box-shadow: none;
+          width: 60px;
+          height: 60px;
+          font-size: 17px;
+          background-color: rgba(217, 161, 76, 0.1);
+          color: $primary-color;
+          @include transition;
+
+          &:hover {
+            background-color: $primary-color;
+            color: $white;
+            @include transition;
+          }
+        }
+      }
+    }
+  }
+}
+
+.post-card-slider-wrapper {
+  .slick-arrow {
+    display: none !important;
+  }
+
+  .slick-list.draggable {
+    margin: 0 -15px;
+    @include sm{
+      margin: 0;
+    }
+  }
+}
+
+.contact-form-area {
+  &.style-1 {
+    padding-bottom: 120px;
+    @include sm {
+      padding-top: 0;
+      padding-bottom: 80px;
+
+      .sub-title {
+        margin-bottom: 0;
+      }
+    }
+    @include md {
+      padding-top: 0;
+      padding-bottom: 100px;
+      .sub-title {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

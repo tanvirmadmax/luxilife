@@ -1,0 +1,47 @@
+.video-popup-card {
+    &.style-3 {
+        .video-popup-btn {
+            background-color: initial;
+            border-radius: 50%;
+            padding: 15px;
+            a {
+                border: 1px solid $white;
+                background-color: initial;
+                width: 130px;
+                height: 130px;
+
+                @include lg {
+                    width: 100px;
+                    height: 100px;
+                }
+                @include md {
+                    width: 80px;
+                    height: 80px;
+                }
+                @include sm {
+                    width: 80px;
+                    height: 80px;
+                }
+
+                i {
+                    color: $primary-color;
+                    font-size: 46px;
+                    margin-top: 8px;
+                    margin-left: 6px;
+
+                    @include lg {
+                        font-size: 28px;
+                    }
+                    @include md {
+                        font-size: 24px;
+                    }
+                    @include sm {
+                        font-size: 24px;
+                        margin-top: 0;
+                    }
+                }
+
+            }
+        }
+    }
+}

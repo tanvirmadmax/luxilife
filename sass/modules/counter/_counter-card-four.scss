@@ -1,0 +1,36 @@
+.counter-card {
+    &.style-4{
+        background-color: $black;
+        border: 1px solid $gray-800;
+        padding: 20px 30px 28px;
+        width: 100%;
+
+        .content{
+            gap: 0;
+
+            .number{
+                -webkit-text-stroke: 1px $white;
+                @include lg{
+                    font-size: 56px;
+                }
+                @include md{
+                    font-size: 48px;
+                    line-height: 60px;
+                }
+                @include sm{
+                    font-size: 48px;
+                    line-height: 60px;
+                }
+            }
+            .title{
+                color: $white;
+                @include md{
+                    font-size: 18px;
+                }
+                @include sm{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

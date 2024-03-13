@@ -1,0 +1,99 @@
+.counter-card {
+    &.style-3{
+        padding: 20px 120px;
+        border-right: 1px solid #ffffff33;
+
+        @include xl{
+          padding: 20px 80px;
+        }
+    
+        @include lg{
+          padding: 15px 80px;
+        }
+        @include md{
+          padding: 20px 90px;
+          margin-bottom: 40px;
+        }
+        @include sm{
+          padding: 15px 50px 45px 50px;
+          margin-bottom: 30px;
+        }
+        @include xs{
+        }
+        @media only screen and (min-width: 0px) and (max-width:530px){
+          border-bottom: 1px solid #ffffff33;
+          border-right: none;
+        }
+        @media only screen and (min-width: 531px) and (max-width:767px){
+
+        }
+    
+        &.first{
+          padding: 20px 120px 20px 0;
+          @include xl{
+            padding: 20px 80px 20px 0;
+          }
+          @include lg{
+            padding: 15px 80px 15px 0;
+          }
+          @include md{
+            padding: 20px 90px;
+            margin-bottom: 40px;
+          }
+          @include sm{
+            padding: 15px 50px 45px 50px;
+            // padding-top: 0;
+          }
+        }
+        &.last{
+          padding: 20px 0 20px 120px;
+          border: none;
+          @include xl{
+            padding: 20px 0 20px 80px;
+          }
+          @include lg{
+            padding: 15px 0 15px 80px;
+          }
+          @include md{
+            padding: 20px 90px;
+          }
+          @include sm{
+            padding: 15px 50px;
+            padding-bottom: 0;
+            margin-bottom: 0;
+          }
+        }
+        &.second{
+          @include md {
+            border: none;
+          }
+          @media only screen and (min-width: 531px) and (max-width:767px){
+            border-right: 0;
+          }
+        }
+        .content{
+            gap: 0;
+
+          .number{
+            -webkit-text-stroke: 1px $white;
+            width: 145px;
+            max-width: 145px;
+            display: flex;
+            gap: 10px;
+            @include lg{
+              max-width: 116px;
+              font-size: 48px;
+            }
+            @include sm{
+              font-size: 48px;
+              justify-content: center;
+            }
+          }
+          .title{
+            color: $white;
+            font-size: 16px;
+            margin-top: -10px;
+          }
+        }
+      }
+}

@@ -1,0 +1,184 @@
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 60px;
+
+  @include xl{
+    margin-bottom: 40px;
+  }
+  @include lg{
+    margin-bottom: 30px;
+  }
+  @include md{
+    margin-bottom: 20px;
+  }
+  @include sm {
+    flex-direction: column;
+    margin-bottom: 30px;
+    align-items: flex-start;
+    gap: 40px;
+  }
+  .sec-content {
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    position: relative;
+  
+
+    @include sm {
+      width: 100%;
+    }
+    .sec-desc {
+      p {
+        br {
+          @include md {
+            display: none;
+          }
+          @include sm {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .short-title {
+    font-family: $heading-font;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: $primary-color;
+    margin-bottom: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    &::before,
+    &::after
+    {
+      content: "";
+      width: 20px;
+      height: 1px;
+      border-bottom: 1px solid $primary-color;
+      flex: 1 1;
+    }
+
+    &.no-divider {
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+    &.only-divider {
+      &::before {
+        display: none;
+      }
+    }
+  }
+  .title {
+    font-family: $heading-font;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+    text-transform: capitalize;
+    color: $black;
+    margin-bottom: 20px;
+
+
+    @include lg {
+      font-size: 48px;
+      line-height: 62px;
+    }
+    @include nesthub {
+      font-size: 47px;
+    }
+    @include md {
+      font-size: 38px;
+      line-height: 48px;
+    }
+    @include sm {
+      font-size: 32px;
+      line-height: 42px;
+    }
+    @media only screen and (min-width: 0px) and (max-width: 439px){
+      br {
+        display: none;
+      }
+    }
+    span {
+      color: $primary-color;
+    }
+  }
+  .sec-desc {
+    font-family: $body-font;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    color: $gray-800;
+    margin-bottom: 0;
+    flex-shrink: 0;
+    .theme-btn {
+      background-color: transparent;
+      color: $black;
+      flex-shrink: 0;
+
+      &:hover {
+        background-color: $primary-color;
+        color: $white;
+        @include transition;
+      }
+    }
+  }
+  &.two-column {
+    align-items: flex-end;
+
+    @include sm {
+      flex-direction: column;
+      gap: 30px;
+      margin-bottom: 50px;
+      align-items: flex-start;
+    }
+    @include md {
+      flex-direction: column;
+      gap: 30px;
+      margin-bottom: 50px;
+      align-items: flex-start;
+    }
+   
+    .sec-content {
+      @include rmaxwd(767) {
+        width: 100%;
+      }
+    }
+    .sec-desc {
+      width: 537px;
+      font-family: $body-font;
+
+      @include lg {
+        width: 440px;
+      }
+      @include md {
+        width: 100%;
+      }
+      @include rmaxwd(767) {
+        width: 100%;
+      }
+      
+      .desc {
+        margin-bottom: 8px;
+      }
+      
+      .simple-btn {
+        font-size: 18px;
+        font-weight: 500;
+        font-family: $heading-font;
+        color: $black;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+    }
+  }
+}

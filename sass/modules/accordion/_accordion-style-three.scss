@@ -1,0 +1,61 @@
+.accordion-wrapper {
+  &.style-three {
+    .accordion-box-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+
+
+      .accordion-list-item {
+        .accordion-head{
+          border: 1px solid $blue-color;
+          background-color: $blue-color;
+          color: $white;
+          border-radius: 8px;
+          padding: 19px 30px;
+          flex-direction: row-reverse;
+          justify-content: space-between;
+          @include transition;
+
+          @include sm {
+            padding: 16px 20px;
+          }
+
+          &:before {
+            content: "\f077";
+            background-color: transparent;
+            font-size: 18px;
+          }
+
+          .accordion-title {
+            color: $white;
+          }
+
+          &.collapsed {
+            color: $black;
+            border-color: $border-color;
+            background-color: transparent;
+            @include transition;
+
+            &:before {
+              color: $black;
+              content: "\f078";
+            }
+            .accordion-title {
+              color: $black;
+
+              @include sm {
+                font-size: 18px;
+                line-height: 28px;
+              }
+            }
+          }
+        }
+        .accordion-item-body {
+          margin-top: 43px;
+          padding: 0 30px;
+        }
+      }
+    }
+  }
+}

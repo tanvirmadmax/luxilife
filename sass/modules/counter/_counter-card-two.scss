@@ -1,0 +1,29 @@
+.counter-card {
+    &.style-2{
+        background-color: $white;
+        border-top: 4px solid $primary-color;
+        padding: 20px 0;
+        width: 100%;
+        text-align: center;
+
+        .content{
+            gap: 5px;
+
+            .number{
+                font-size: 48px;
+                line-height: 60px;
+                text-transform: capitalize;
+                justify-content: center;
+
+                @include xs {
+                    font-size: 38px;
+                }
+            }
+            .title {
+                @include xs {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

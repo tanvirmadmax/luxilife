@@ -1,0 +1,137 @@
+.project-card {
+    &.style-3 {
+        width: 100%;
+        height: 485px;
+        padding: 0;
+        border-radius: 5px;
+        @include sm{
+            height: 380px;
+        }
+        &:hover{
+            .image{
+                img{
+                    border-radius: 5px;
+                    transform: scale(1.03);
+                    @include transition;
+                }
+            }
+        }
+        .image {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 5px;
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                object-fit: cover;
+                border-radius: 5px;
+                transform: scale(1.0);
+                filter: grayscale(100%);
+                @include transition;
+                // filter: brightness(50%);
+            }
+        }
+
+        .main-content {
+            top: 0;
+            height: 100%;
+            padding: 0;
+
+            .main-content-wrapper {
+                padding: 30px;
+                flex-direction: column;
+                align-items: start;
+                background-image: linear-gradient(180deg, #23262D 0%, rgba(35, 38, 45, 0.00) 100%);
+                overflow: hidden;
+                @include sm{
+                    // padding: 20px 12px;
+                }
+
+                &:hover {
+                    .title {
+                        color: $primary-color;
+                        @include transition;
+                    }
+
+                    .content {
+                        .desc {
+                            visibility: visible;
+                            opacity: 1;
+                            transform: translateY(0%);
+                            @include transition;
+                        }
+                    }
+
+                    .read-more {
+                        .fa-arrow-right{
+                            color: $primary-color;
+                            @include transition;
+                        }
+                    }
+                }
+
+                .title {
+                    font-family: $heading-font;
+                    font-size: 32px;
+                    font-weight: 700;
+                    line-height: 41px;
+                    text-transform: capitalize;
+                    color: $white;
+                    @include transition;
+                    @include md{
+                        font-size: 30px;
+                        // line-height: 30px;
+                    }
+                    @include sm{
+                        font-size: 22px;
+                        line-height: 30px;
+                    }
+                }
+
+                .content {
+                    .desc {
+                        font-family: $body-font;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 30px;
+                        color: $white;
+                        margin-bottom: 15px;
+                        visibility: hidden;
+                        opacity: 0;
+                        transform: translateY(100%);
+                        @include transition;
+                        @include sm{
+                            font-size: 14px;
+                            line-height: 25px;
+                        }
+                    }
+
+                    .read-more {
+                        a {
+                            color: $white;
+                            font-family: $heading-font;
+                            font-size: 16px;
+                            font-weight: 700;
+                            line-height: 32px;
+                            letter-spacing: 1.28px;
+                            text-transform: uppercase;
+
+                            i {
+                                font-size: 16px;
+                                font-weight: 900;
+                                margin-left: 5px;
+                                color: $white;
+                                @include transition;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

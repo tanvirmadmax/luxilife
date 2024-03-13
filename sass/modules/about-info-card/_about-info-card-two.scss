@@ -1,0 +1,37 @@
+.about-info-card {
+
+  &.style-1 {
+    .about-info-content {
+      .sec-content {
+        .desc {
+          margin-bottom: 0;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  &.style-2 {
+    .about-info-content {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      @include lg{
+        gap: 0;
+      }
+      .section-title {
+        gap: 0;
+
+        .short-title {
+          margin-bottom: 10px;
+        }
+        .title {
+          margin-bottom: 20px;
+        }
+        .desc {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

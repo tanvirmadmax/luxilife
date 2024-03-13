@@ -1,0 +1,223 @@
+.info-card-wrapper {
+    position: relative;
+}
+.info-card {
+
+    &.style-1 {
+        .info-card-inner {
+            padding: 0 38px;
+            @include xl{
+                padding: 0 16px;
+            }
+            @include lg{
+                padding: 0 16px;
+            }
+            @include md {
+                padding: 0 30px;
+            }
+            @include sm {
+                padding: 0px;
+            }
+            @include xs {
+                padding: 0px 20px;
+            }
+        }
+        .icon-wrapper {
+            justify-content: center;
+        }
+        .title-wrapper {
+            align-items: center;
+            padding-bottom: 18px;
+
+            .title {
+                color: $white;
+                text-align: center;
+            }
+        }
+        .content {
+            align-items: center;
+            text-align: center;
+            @include lg {
+                gap: 30px;
+            }
+            @include md {
+                gap: 30px;
+            }
+            @include sm {
+                gap: 30px;
+            }
+
+            .desc {
+                color: $white-50;
+            }
+            .read-more {
+                a {
+                    color: $white;
+                    &:hover{
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+        .read-more {
+            display: flex;
+            justify-content: start;
+            a {
+               
+                font-family: $heading-font;
+                font-size: 16px;
+                letter-spacing: 1.28px;
+                text-transform: uppercase;
+                line-height: 32px;
+                font-weight: 700;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            
+                &:hover {
+                   i {
+                    color: $primary-color;
+                    @include transition;
+                   }
+
+                }
+            }
+        }
+    }
+
+    &:hover {
+        .image-wrapper {
+            .overlay {
+                @include transition;
+                opacity: 0.72;
+            }
+            img {
+                transform: scale(1.2);
+                @include transition;
+            }
+        }
+        .icon {
+            img {
+                transform: rotateY(360deg);
+                @include transition;
+            }
+        }
+    }
+    .info-card-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        height: 100%;
+    }
+    .divider {
+        &:before {
+            content: "";
+            position: absolute;
+            background-color: rgb(94, 111, 146);
+            opacity: 0.2;
+            right: 0;
+            height: 80%;
+            width: 1px;
+            top: 45px;
+        }
+    }
+
+    .image-wrapper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        transition: all 0.6s ease;
+        img {
+            width: 100%;
+            height: 100%;
+            transform: scale(1);
+            @include transition;
+        }
+        .overlay {
+            width: 100%;
+            height: 100%;
+            background: $primary-color;
+            @include transition;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.6;
+        }
+    }
+    .icon-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    .icon {
+        display: flex;
+        flex-shrink: 0;
+        justify-content: start;
+        width: 54px;
+        height: 50px;
+
+        img {
+            @include transition;
+        }
+    }
+    .content-wrapper {
+        position: relative;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+    }
+    .title-wrapper {
+        display: flex;
+        gap: 27px;
+        padding-bottom: 15px;
+        border-bottom: none;
+        transition: all 0.6s ease;
+        flex-direction: column;
+        align-items: start;
+
+        .icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            width: 74px;
+            height: 74px;
+            background: transparent;
+            @include xs {
+                width: auto;
+                height: auto;
+            }
+        }
+        .title {
+            font-size: 24px;
+            line-height: 30px;
+            font-weight: 700;
+            margin: 0;
+            color: $secondary-color;
+            transition: all 0.6s ease;
+        }
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 43px;
+
+        @include sm {
+            gap: 24px;
+        }
+        .desc {
+            transition: all 0.6s ease;
+            font-size: 16px;
+            line-height: 30px;
+            font-weight: 400;
+            margin: 0;
+            color: $text-color;
+        }
+        
+    }
+}

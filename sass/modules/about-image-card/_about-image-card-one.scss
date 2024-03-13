@@ -1,0 +1,162 @@
+.about-image-card {
+    &.style-1 {
+       .main-img-wrapper {
+            position: relative;
+            margin-right: 30px;
+
+            @include lg {
+              margin-right: 94px;
+            }
+
+            @include md {
+              margin-right: 94px;
+            }
+            @include sm {
+              margin-right: 0;
+            }
+            @include xs {
+              margin-right: 0px;
+            }
+
+         .main-img-inner {
+           position: relative;
+           display: flex;
+           gap: 24px;
+           z-index: 2;
+           
+           @include xs {
+            gap: 14px;
+           }
+
+           .main-img {
+            height: 438px;
+            object-fit: cover;
+              @include sm {
+                width: 100%;
+                height: 100%;
+              }
+           }
+
+
+           .main-img,
+           .top-image{
+            &:hover{
+              img{
+                transform: scale(1.03);
+              }
+            }
+            img{
+              @include transition;
+            }
+           }
+           .top-image {
+            position: relative;
+            top: 36px;
+            right: 0;
+            flex-shrink: 0;
+            overflow: hidden;
+            height: 615px;
+            object-fit: cover;
+            @include transition;
+            @include sm {
+              width: 50%;
+              top: 35px;
+              height: 360px;
+            }
+            img{
+              width: 100%;
+              height: 100%;
+            }
+           }
+   
+         }
+         .review-card-wrapper{
+            position: absolute;
+            max-width: 516px;
+            width: 100%;
+            bottom: -6px;
+            left: 40px;
+            z-index: 1;
+
+            @include sm {
+              left: 34px;
+              bottom: -36px;
+            }
+         
+            @include xs {
+              left: 0;
+              bottom: -36px;
+            }
+         
+          
+         }
+         .review-card {
+            height: 380px;
+            background-color: rgba(217, 161, 76, 0.15);
+            display: flex;
+            align-items: flex-end;
+
+            @include sm {
+              width: 425px;
+              height: 340px;
+            }
+            @include xs {
+              width: 320px !important;
+              height: 230px;
+            }
+   
+           .card-text {
+                background-color: $primary-color;
+                padding: 20px 30px ;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 199px;
+                height: 135px;
+                gap: 5px;
+                margin-left: 37px;
+                margin-bottom: 26px;
+
+                @include sm {
+                  width: 165px;
+                  height: auto;
+                  margin-left: 35px;
+                  padding: 20px;
+                }
+                @include xs {
+                  width: 153px;
+                  margin-left: 0;
+                  margin-bottom: 0;
+                }
+
+             h2 {
+               color: $white;
+               font-size: 48px;
+               font-weight: 700;
+               line-height: 60px;
+               text-transform: capitalize;
+
+               @include sm {
+                font-size: 38px;
+                line-height: 48px;
+               }
+               @include xs {
+                font-size: 38px;
+                line-height: 30px;
+               }
+             }
+             span {
+               color: $white;
+               text-transform: capitalize;
+               text-align: center;
+               line-height: 24px;
+             }
+           }
+         }
+         
+         
+       }
+    }
+   }
+   
+   

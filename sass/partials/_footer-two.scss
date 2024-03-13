@@ -1,0 +1,142 @@
+.footer {
+  .widget-menu-wrapper{
+    padding-left: 50px;
+    padding-right: 30px;
+    @include rmaxwd(991){
+      padding-left: 0;
+    }
+    @include lg{
+      padding-left: 12px;
+    }
+    @media only screen and (min-width: 992px) and (max-width: 1399px){
+      padding-right: 0;
+    }
+    @include xl{
+      padding-right: 0;
+    }
+  }
+  &.style-2 {
+    .footer-widget-info {
+      .extra-info {
+        margin-top: 20px;
+        .time-slot {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .footer-widget-info p,
+    .footer-widget.widget_nav_menu li a,
+    .footer-bottom-menu ul li a,
+    .footer-bottom-area .copyright-text p {
+      color: $white;
+    }
+    .footer-widget.widget_nav_menu li a,
+    .footer-bottom-menu ul li a {
+      &:hover {
+        color: $primary-color;
+      }
+    }
+    .footer-bottom-area .copyright-text p a {
+      color: #8f939b;
+      font-weight: 700;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+    .footer-bottom-menu {
+      display: flex;
+      flex-grow: 1;
+      justify-content: end;
+
+      @include rmaxwd(991) {
+        justify-content: start;
+      }
+    }
+    .copyright-text {
+      @include rmaxwd(991) {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+    // Social Share
+    .footer-widget {
+      .social-profile {
+        a {
+          color: unset;
+          background-color: transparent;
+          i {
+            color: $white;
+          }
+          &:hover {
+            i {
+              color: $primary-color;
+            }
+          }
+        }
+      }
+      &.widget_nav_menu {
+        li {
+          a {
+            &:before {
+              display: none;
+            }
+          }
+        }
+      }
+      .footer-widget-contact {
+        p {
+          margin-bottom: 0;
+        }
+        .footer-contact {
+          ul {
+            li {
+              align-items: start;
+              .contact-icon {
+                // margin-top: 8px;
+              }
+              .contact-text{
+                a,span{
+                  color: #ffffffb3;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .subscribe-form-widget {
+    &.style-2 {
+      .mc4wp-form-fields {
+        border-color: rgb(199, 199, 225);
+        display: block;
+      }
+      .submit-btn {
+        color: $black;
+        width: auto;
+        margin-top: 20px;
+        padding: 12px 19px;
+        i {
+          display: none;
+        }
+        span {
+          display: block;
+          text-transform: uppercase;
+          color: $white;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 32px;
+          letter-spacing: 1.28px;
+          font-family: $heading-font;
+        }
+      }
+      .single-field {
+        input {
+          height: 60px;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+      }
+    }
+  }
+}

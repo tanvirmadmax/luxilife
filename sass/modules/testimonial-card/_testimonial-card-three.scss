@@ -1,0 +1,77 @@
+.testimonial-card {
+  &.style-3 {
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+    padding: 0;
+    background: none;
+
+    @include xs {
+      gap: 20px;
+    }
+
+    .user-info-wrapper {
+      flex-direction: row;
+      gap: 30px;
+      align-items: center;
+
+      .user-img{
+        width: 126px;
+        height: 130px;
+        overflow: hidden;
+        border-radius: 50%;
+
+        @include xs {
+            width: 80px;
+            height: 80px;
+            margin-top: 5px;
+        }
+      }
+      .user-meta {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        @include xl {
+          gap: 5px;
+        }
+        @include rmaxwd(1199) {
+          gap: 0;
+        }
+
+
+        @include xs {
+          gap: 0;
+        }
+
+        .name{
+          color: $white;
+        }
+        .designation{
+          color: $white;
+        }
+      }
+    }
+
+    .content-wrapper{
+      .description{
+        font-size: 22px;
+        line-height: 33px;
+        color: $white;
+        padding: 0 20px;
+
+        @include md{
+          font-size: 20px;
+          width: 75%;
+          margin: 0 auto;
+        }
+        @include xs {
+          font-size: 16px;
+          text-align: justify;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}

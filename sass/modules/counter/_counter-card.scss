@@ -1,0 +1,234 @@
+.counter-card {
+  &.style-1{
+    position: relative;
+    text-align: center;
+   
+
+    .content{
+      padding: 80px 0;
+      width: 100%;
+      text-align: center;
+      
+      @include sm {
+        text-align: center;
+        padding: 0;
+        gap: 0;
+      }
+      @include xs{
+        padding: 40px 0;
+      }
+      @include md {
+        text-align: center;
+        padding: 60px 0;
+        gap: 0;
+      }
+      @include lg {
+        text-align: center;
+        padding: 60px 0;
+        gap: 0;
+      }
+      @include xl {
+        text-align: center;
+        padding-left: 0;
+        gap: 0;
+      }
+
+      .number{
+        color: $white;
+        width: 100%;
+      }
+      .title{
+        color: $white;
+        white-space: nowrap;
+      }
+    }
+    .divider {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 1px;
+      opacity: 0.2;
+      background-color: $white;
+
+      @include xs {
+        bottom: 0;
+        top: unset;
+        left: 0;
+        right: unset;
+        width: 100%;
+        height: 1px;
+      }
+    }
+
+    &.first {
+      .content {
+        text-align: left;
+
+        @include sm {
+          text-align: center;
+        }
+        @include xs{
+          padding-top: 0;
+        }
+        @include md {
+          text-align: center;
+        }
+        @include lg {
+          text-align: center;
+        }
+        @include xl {
+          text-align: center;
+        }
+      }
+    }
+    &.last {
+      .content {
+        text-align: end;
+
+        @include sm {
+          text-align: center;
+        }
+        @include xs{
+          padding-bottom: 20px;
+        }
+        @include md {
+          text-align: center;
+        }
+        @include lg {
+          text-align: center;
+        }
+        @include xl {
+          text-align: center;
+        }
+      }
+      
+      .divider {
+        display: none;
+      }
+    }
+
+    &.second {
+      .content {
+        text-align: left;
+        margin-left: 70px;
+
+        @include sm {
+          text-align: center;
+          margin-left: 0;
+        }
+
+        @include md {
+          text-align: center;
+          margin-left: 0;
+        }
+        @include lg {
+          text-align: center;
+          margin-left: 0;
+        }
+        @include xl {
+          text-align: center;
+          margin-left: 0;
+        }
+      }
+      @include xs {
+        margin-bottom: 0px !important;
+        .divider {
+          display: initial !important;
+        }
+      }
+      @include sm {
+        margin-bottom: 50px;
+        .divider {
+          display: none;
+        }
+      }
+      @include md {
+        margin-bottom: 50px;
+        .divider {
+          display: none;
+        }
+      }
+    }
+    &.third {
+        .content {
+          text-align: left;
+          margin-left: 100px;
+
+          @include sm {
+            text-align: center;
+            margin-left: 0;
+          }
+          @include md {
+            text-align: center;
+            margin-left: 0;
+          }
+          @include lg {
+            text-align: center;
+            margin-left: 0;
+          }
+          @include xl {
+            text-align: center;
+            margin-left: 0;
+          }
+        }
+    }
+  }
+
+  .content{
+    display: inline-flex;
+    gap: 10px;
+    flex-direction: column;
+    position: relative;
+
+    .number {
+      font-family: $heading-font;
+      font-weight: 700;
+      font-size: 68px;
+      line-height: 78px;
+      color: $black;
+
+      @include lg {
+        font-size: 60px;
+        line-height: 72px;
+      }
+      @include sm {
+        font-size: 48px;
+      }
+
+     
+     
+    }
+  
+    .title {
+      margin: 0;
+      font-family: $body-font;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      text-transform: capitalize;
+      line-height: 30px;
+      color: $black;
+  
+      @include sm {
+        font-size: 18px;
+        line-height: 30px;
+        text-align: center;
+      }
+      @include md {
+        font-size: 20px;
+        line-height: 30px;
+      }
+      @include lg {
+        font-size: 18px;
+        line-height: 38px;
+      }
+  
+      br {
+        @include sm {
+          display: none;
+        }
+      }
+    }
+  }
+}

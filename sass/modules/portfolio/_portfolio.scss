@@ -1,0 +1,149 @@
+.portfolio-wrapper {
+  margin-right: 8px;
+}
+.portfolio-card {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  padding: 28px 0;
+  border-bottom: 3px solid #E3E3E3;
+  cursor: default;
+
+  @include sm {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 24px 0;
+  }
+  @include md {
+    gap: 30px;
+  }
+  @include lg {
+    gap: 16px;
+  }
+  @include xl{
+    gap: 30px;
+  }
+  &:first-child {
+    border-top: 3px solid #E3E3E3;
+  }
+
+  &:hover {
+    .btn-wrapper {
+      .arrow-btn {
+        color: $black;
+        transform: rotate(-25deg);
+        @include transition;
+      }
+    }
+  }
+  &.active {
+    .title {
+      color: $primary-color;
+      @include transition;
+    }
+    .btn-wrapper {
+      .arrow-btn {
+        color: $black;
+        transform: rotate(-25deg);
+        @include transition;
+      }
+    }
+  }
+  .title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    color: $black;
+    width: 170px;
+    flex-shrink: 0;
+    margin-bottom: 0;
+    @include transition;
+
+    @include sm {
+      width: 100%;
+    }
+  }
+  .content {
+    padding-right: 36px;
+    flex-grow: 1;
+    position: relative;
+
+    .short-title {
+      font-size: 16px;
+      font-weight: 400;
+      display: block;
+
+      @include sm {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      @include md {
+        font-size: 18px;
+      }
+      @include lg {
+        font-size: 18px;
+      }
+    }
+  }
+  .btn-wrapper {
+    .arrow-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        font-size: 20px;
+        color: rgba(35, 38, 45, 0.1);
+        @include transition;
+    }
+  }
+}
+
+.portfolio-card-main-wrapper{
+  @include sm{
+    margin: 0 12px;
+  }
+}
+// Portfolio Full Screen Image
+.portfolio-fullscreen-image {
+  height: 100%;
+  width: 100%;
+  position: relative;
+ 
+
+  @include md {
+    min-height: 400px;
+    margin: 0;
+  }
+  @include sm {
+    min-height: 350px;
+    margin: 0;
+  }
+
+  .tabimg {
+    transform: scale(1.1);
+    opacity: 0;
+    transition: all 0.5s ease-out;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 645px;
+    width: 100%;
+    height: 100%;
+    @include sm{
+      max-width: 550px;
+    }
+    @include md {
+      max-width: 100%;
+    }
+
+    &.active {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+}

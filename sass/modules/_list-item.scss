@@ -1,0 +1,38 @@
+.list-item-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    @include sm {
+        gap: 10px;
+    }
+    .list-item {
+        display: flex;
+        gap: 15px;
+        flex-wrap: nowrap;
+        align-items: center;
+
+        .icon {
+            font-size: 20px;
+            color: $primary-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            border-radius: 50%;
+        }
+        .text {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: initial;
+            margin-bottom: 0;
+            color: $text-color;
+        }
+        &.style-two{
+            gap: 10px;
+            .icon{
+                font-size: 8px;
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.slider-nav-btn-wrapper {
+    flex-direction: row-reverse;
+}
+.circle-rotate-text span {
+    transform-origin: top left;
+    left: 0;
+    right: unset;
+}
+
+.style-btn i,
+.simple-btn i,
+.info-card.style-two .more-btn i,
+.post-card .image .btn-link i,
+.portfolio-area.style-3 .portfolio-card .btn-wrapper a i,
+.author-info .author-post a i,
+.portfolio-style-two .content-wrapper .content .btn-wrapper a i {
+    transform: rotate(220deg);
+}
+.simple-btn:hover i,
+.info-card.style-two .more-btn:hover i,
+.post-card .image .btn-link:hover i,
+.portfolio-area.style-3 .portfolio-card .btn-wrapper a:hover i,
+.portfolio-style-two .content-wrapper .content .btn-wrapper a:hover i {
+    transform: rotate(180deg);
+}
+
+.portfolio-slider-area.style-1 .single-portfolio-item .portfolio-cat-wrapper {
+    writing-mode: vertical-rl;
+}
+.single-post-item button.post-gallery-btn,
+.portfolio-slider-wrapper button.portfolio-arrow-btn,
+.basic-pagination .page-numbers i,
+.blog-post-nav .post-navigation:last-child .text i {
+    transform: rotate(-180deg);
+}
+.blog-post-nav .post-navigation .text i,
+.breadcrumb-list ul li:before {
+    transform: rotate(180deg);
+}

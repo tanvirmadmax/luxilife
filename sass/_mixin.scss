@@ -1,0 +1,191 @@
+@mixin gradient-color-red () {
+  background: rgb(227,0,8);
+  background: linear-gradient(45deg, rgb(227,0,8) 0%, rgb(250,174,0) 100%);
+}
+
+@mixin gradient-color-skye () {
+  background: rgb(0,91,172);
+  background: linear-gradient(135deg, rgba(0,91,172,0.83) 0%, rgba(30,174,152,1) 100%);
+}
+@mixin gradient-color-solid-skye () {
+  background: rgb(0,91,172);
+  background: linear-gradient(135deg, rgba(0,91,172,1) 0%, rgba(30,174,152,1) 100%);
+}
+
+@mixin overlay($bg-color){
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:$bg-color;
+
+  }
+  @mixin bg-opacity($color, $opacity) {
+    background: $color;
+    background: rgba($color, $opacity);
+  }
+  //color opacity
+  @mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity = $opacity-ie); //IE8
+  }
+  
+//background image mixin
+@mixin background-image($imgpath,$position:center 0,$repeat: no-repeat) {
+  background: {
+      image: url($imgpath);
+      position: $position;
+      repeat: $repeat;    
+  }
+}
+//Background Before Shape image mixin
+@mixin shape-image($imgpath,$position:center 0,$repeat: no-repeat) {
+  background: {
+      image: url($imgpath);
+      position: $position;
+      repeat: $repeat;
+  }
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: ""; 
+}
+//Background Shape image mixin
+@mixin background-shape($imgpath,$position:center center,$repeat: no-repeat) {
+  background: {
+    image: url($imgpath);
+    position: $position;
+    repeat: $repeat;
+}
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 0;
+  background-size: 100%;
+}
+
+//Before Icon mixin
+@mixin before-icon($icon) {
+  position: absolute;
+  content:$icon;
+  left: 0;
+  top: 50%;
+  font-family: 'Font Awesome 5 Free';
+  transform: translateY(-50%);
+}
+//Before Shape
+@mixin before-shape() {
+  position: absolute;
+  content:"";
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+//Border Shape mixin
+@mixin border-shape($width:30px,$height:4px) {
+	position: relative;
+	display: inline-block;
+  width:$width;
+  height: $height;
+  border-radius:2px;
+
+}
+
+//List Item mixin
+@mixin center() {
+  position: absolute;  
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  right: 0; 
+  left: 0; 
+}
+
+//List Item mixin
+@mixin list-item() {
+  display: inline-block;
+  width: 100%;
+  position: relative;   
+}
+
+@mixin css3-prefix($property, $value) {
+  -webkit-#{$property}: #{$value};
+   -khtml-#{$property}: #{$value};
+     -moz-#{$property}: #{$value};
+      -ms-#{$property}: #{$value};
+       -o-#{$property}: #{$value};
+          #{$property}: #{$value};
+}
+
+
+
+// Small devices
+@mixin xs {
+  @media only screen and (min-width: 0px) and (max-width:576px){
+      @content;
+  }
+}
+@mixin sm {
+  @media only screen and (min-width: 0px) and (max-width: 767px){
+      @content;
+  }
+}
+// Medium devices
+@mixin md {
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+      @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media only screen and (min-width: 1200px) and (max-width: 1399px) {
+    @content;
+  }
+}
+
+// Nest Hub Device
+@mixin nesthub() {
+  @media only screen and (min-width: 992px) and (max-width: 1024px) {
+    @content;
+  }
+}
+// Nest Hub Max Device
+@mixin nesthubmax() {
+  @media only screen and (min-width: 1025px) and (max-width: 1280px) {
+    @content;
+  }
+}
+
+
+// Custom Max Width
+@mixin rmaxwd($screen) {
+  @media (max-width: $screen+'px') {
+    @content;
+  }
+}
+// Custom devices
+@mixin rwd($screen) {
+  @media (min-width: $screen+'px') {
+      @content;
+  }
+}
+
+
+//transition
+@mixin transition{
+  transition: all 0.5s ease-out;
+}

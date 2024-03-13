@@ -1,0 +1,131 @@
+.slider-area-wrapper {
+  &.style-1 {
+    margin-right: -9999px;
+
+    @include lg {
+      margin-right: unset;
+    }
+    @include md {
+      margin-right: unset;
+    }
+    @include sm {
+      margin-right: unset;
+    }
+
+    .testimonial-slider-wrapper{
+      .slick-item{
+        margin: 0 15px;
+        @include sm{
+          margin: 0 4px;
+        }
+      }
+    }
+  }
+
+}
+
+// Testimonial Slider Arrow hidden
+.testimonial-slider-wrapper{
+  .slick-arrow{
+    display: none !important;
+  }
+}
+
+// Testimonial Slider Dots
+.testimonial-slider-wrapper {
+  &.style-4 {
+
+    .slick-list {
+      overflow: visible !important;
+    }
+
+      .slick-item {
+        &.slick-center {
+          margin-top: -40px;
+          @include transition;
+          @include rmaxwd(991){
+             margin-top: 0;
+          }
+        }
+
+        margin-top: 0;
+        @include transition;
+      }
+  }
+
+  &.style-5 {
+    .slick-list {
+      overflow: visible !important;
+      
+      @include sm{
+        overflow: hidden !important;
+      }
+    }
+  }
+}
+
+// Slick dots style
+.slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0 0;
+  @include sm{
+    padding-left: 0;
+  }
+  li {
+    list-style: none;
+    line-height: 0;
+
+    &:first-child {
+      button {
+        border-radius: 40px 0 0 40px;
+      }
+    }
+    &:last-child {
+      button {
+        border-radius: 0 40px 40px 0;
+      }
+    }
+    &.slick-active {
+      button {
+        width: 105px;
+        @include transition;
+
+        &:before {
+          width: 100%;
+          visibility: visible;
+          @include transition;
+        }
+
+      }
+    }
+
+    button {
+      width: 65px;
+      font-size: 0;
+      line-height: 0;
+      padding: 0;
+      background-color: $gray-200;
+      height: 11px;
+      @include transition;
+      @include sm{
+        width: 55px;
+      }
+      position: relative;
+
+      &:before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: $primary-color;
+        visibility: hidden;
+        @include transition;
+        border-radius: 40px;
+      }
+    }
+  }
+}

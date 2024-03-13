@@ -1,0 +1,17 @@
+.accordion-wrapper {
+  &.style-two {
+    .accordion-list-item {
+      .accordion-head {
+        border-top: 1px solid #C7C7E1FF;
+        padding: 31px 0;
+      }
+      &:last-child {
+        border-bottom: 1px solid #C7C7E1FF;
+      }
+      .accordion-item-body {
+        padding-bottom: 20px;
+        @include transition;
+      }
+    }
+  }
+}

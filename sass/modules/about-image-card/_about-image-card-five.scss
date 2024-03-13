@@ -1,0 +1,214 @@
+// .about-image-card {
+//     &.style-5 {
+//        margin-right: 85px;
+
+//        @include lg {
+//         margin-right: 50px;
+//        }
+//        @include sm {
+//         margin-right: 44px;
+//        }
+
+//         .main-img-inner {
+//             margin-left: -55px;
+//             padding: 22px 23px;
+//             position: relative;
+
+//             @include lg {
+//                 margin-left: 0;
+//             }
+//             @include md {
+//                 margin-left: 0;
+//             }
+//             @include sm {
+//                 margin-left: 0;
+//             }
+
+//             &.box {
+//                 background-image: repeating-linear-gradient(178deg, $primary-color, $primary-color 13px, transparent 13px, transparent 21px, $primary-color 21px), repeating-linear-gradient(268deg, $primary-color, $primary-color 13px, transparent 13px, transparent 21px, $primary-color 21px), repeating-linear-gradient(-2deg, $primary-color, $primary-color 13px, transparent 13px, transparent 21px, $primary-color 21px), repeating-linear-gradient(88deg, $primary-color, $primary-color 13px, transparent 13px, transparent 21px, $primary-color 21px);
+//                 background-size: 4px calc(100% + 21.01px), calc(100% + 21.01px) 4px, 4px calc(100% + 21.01px) , calc(100% + 21.01px) 4px;
+//                 background-position: 0 0, 0 0, 100% 0, 0 100%;
+//                 background-repeat: no-repeat;
+//                 animation: borderAnimation 1s infinite linear reverse;
+//             }
+
+//             .review-card {
+//                 padding: 42px 50px;
+//                 border-radius: 50%;
+//                 background-color: $white;
+//                 display: flex;
+//                 justify-content: center;
+//                 align-items: center;
+//                 width: 200px;
+//                 height: 200px;
+//                 position: absolute;
+//                 top: 125px;
+//                 right: -53px;
+
+//                 @include lg {
+//                     width: 170px;
+//                     height: 170px;
+//                     padding: 42px 30px;
+//                 }
+//                 @include sm {
+//                     padding: 42px 30px ;
+//                     width: 150px;
+//                     height: 150px;
+//                     top: 100px;
+//                 }
+
+//                 .card-text {
+//                     text-align: center;
+//                     .number {
+//                         font-family: $heading-font;
+//                         font-size: 48px;
+//                         font-weight: 700;
+//                         line-height: 60px;
+//                         text-transform: capitalize;
+//                         color: $white;
+//                         -webkit-text-stroke: 2px black;
+//                         -webkit-text-fill-color: rgba(255, 255, 255, 0);
+
+//                         @include sm {
+//                             font-size: 38px;
+//                             line-height: 48px;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+.about-image-card{
+    &.style-5{
+        position: relative;
+        margin-right: 85px;
+        @include xl{
+            margin-right: 70px;
+        }
+        @include lg {
+            margin-right: 60px;
+        }
+
+        @include sm {
+            margin-right: 70px;
+        }
+        @include xs {
+            margin-right: 50px;
+        }
+
+        img{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            @include transition;
+
+            &:hover{
+                transform: scale(1.03);
+                @include transition;
+            }
+        }
+        .main-img-wrapper {
+           margin-left: -62px;
+
+           @include lg {
+            margin-left: -20px;
+           }
+           @include md {
+            margin-left: 0;
+           }
+           @include sm {
+            margin-left: 0;
+           }
+        }
+        .main-img-inner {
+            padding: 22px 23px;
+            position: relative;
+
+            @include lg {
+                margin-left: 0;
+            }
+            @include md {
+                margin-left: 0;
+            }
+            @include sm {
+                margin-left: 0;
+            }
+
+            &.box {
+                background-image: repeating-linear-gradient(180deg, #d9a14c, #d9a14c 13px, transparent 13px, transparent 23px, #d9a14c 23px), repeating-linear-gradient(270deg, #d9a14c, #d9a14c 13px, transparent 13px, transparent 23px, #d9a14c 23px), repeating-linear-gradient(0deg, #d9a14c, #d9a14c 13px, transparent 13px, transparent 23px, #d9a14c 23px), repeating-linear-gradient(90deg, #d9a14c, #d9a14c 13px, transparent 13px, transparent 23px, #d9a14c 23px);
+                background-size: 3px calc(100% + 23px), calc(100% + 23px) 3px, 3px calc(100% + 23px) , calc(100% + 23px) 3px;
+                background-position: 0 0, 0 0, 100% 0, 0 100%;
+                background-repeat: no-repeat;
+                animation: borderAnimation 0.9s infinite linear reverse;
+            }
+
+            .review-card {
+                padding: 42px 50px;
+                border-radius: 50%;
+                background-color: $white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 200px;
+                height: 200px;
+                position: absolute;
+                top: 125px;
+                right: -53px;
+
+                @include lg {
+                    width: 170px;
+                    height: 170px;
+                    padding: 42px 30px;
+                }
+                @include sm {
+                    padding: 42px 30px ;
+                    width: 150px;
+                    height: 150px;
+                    top: 100px;
+                }
+                @include xs {
+                    width: 136px;
+                    height: 136px;
+                    top: 50px;
+                }
+
+                .card-text {
+                    text-align: center;
+                    .number {
+                        font-family: $heading-font;
+                        font-size: 48px;
+                        font-weight: 700;
+                        line-height: 60px;
+                        text-transform: capitalize;
+                        color: $white;
+                        -webkit-text-stroke: 2px black;
+                        -webkit-text-fill-color: rgba(255, 255, 255, 0);
+
+                        @include sm {
+                            font-size: 28px;
+                            line-height: 38px;
+                        }
+                        @include xs {
+                            font-size: 28px;
+                            line-height: 38px;
+                        }
+                    }
+                    .number-text {
+                        margin-bottom: 0; 
+                        @include xs {
+                            font-size: 12px;
+                            line-height: 22px;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+           

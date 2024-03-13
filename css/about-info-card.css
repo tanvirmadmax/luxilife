@@ -1,0 +1,80 @@
+.about-info-section .info-content h4 {
+  font-family: Rajdhani;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #D9A14C;
+  position: relative;
+  margin-bottom: 10px;
+}
+.about-info-section .info-content h4 span {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: #D9A14C;
+  color: #D9A14C;
+  position: absolute;
+  left: 110px;
+  top: 50%;
+}
+.about-info-section .info-content h2 {
+  font-family: Rajdhani;
+  font-size: 48px;
+  font-weight: 900 !important;
+  line-height: 60px;
+  text-transform: capitalize;
+  color: #23262D;
+  margin-bottom: 20px;
+}
+.about-info-section .info-content p {
+  font-family: Rubik;
+  font-size: 16px;
+  line-height: 30px;
+  color: #616670;
+}
+.about-info-section .info-card-group {
+  border-left: 1px solid #D9A14C;
+  padding-left: 45px;
+  position: relative;
+  margin: 40px 0 0 40px;
+}
+.about-info-section .info-card-group .top-dot {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #D9A14C;
+  position: absolute;
+  top: 0;
+  left: -5px;
+}
+.about-info-section .info-card-group .bottom-dot {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #D9A14C;
+  position: absolute;
+  bottom: 0;
+  left: -5px;
+}
+.about-info-section .info-card-group .info-card {
+  margin-bottom: 30px;
+  background: none;
+  padding: 0;
+}
+.about-info-section .info-card-group .info-card h4 {
+  font-family: Rajdhani;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #23262D;
+}
+.about-info-section .info-card-group .info-card p {
+  font-family: Rubik;
+  font-size: 16px;
+  line-height: 30px;
+  color: #616670;
+}

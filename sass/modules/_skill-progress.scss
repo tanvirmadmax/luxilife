@@ -1,0 +1,52 @@
+.skill-progressbar-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 20px;
+}
+.skill-progressbar {
+  .progress-inner-item {
+    position: relative;
+    margin-bottom: 10px;
+    line-height: inherit;
+  }
+  .skill-title {
+    z-index: 100;
+    color: $secondary-color;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: $heading-font;
+  }
+  .progressbar-number{
+    width: 100%;
+    z-index: 10;
+  }
+  .progress-number-count {
+    padding: 0 8px;
+    position: absolute;
+    transform: translateX(-50%);
+  }
+  .progressbar-number,
+  .progress-number-count {
+    font-size: 16px;
+    line-height: 41px;
+    height: 8px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    text-transform: none;
+    font-family: $body-font;
+    color: $text-color;
+  }
+  .progress-content-outter {
+    height: 8px;
+    background-color: rgb(234,234,234);
+    border-radius: 20px;
+  }
+  .progress-content {
+    height: 8px;
+    // width: 436px;
+    background-color: $primary-color;
+    width: 0%;
+    border-radius: 20px;
+  }
+}

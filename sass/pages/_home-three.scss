@@ -1,0 +1,429 @@
+//
+//// Testimonial Slider Area
+//.testimonial-slider-area {
+//  &.style-3 {
+//    padding-top: 120px;
+//
+//    @include sm {
+//      padding-top: 80px;
+//    }
+//    @include md {
+//      padding-top: 100px;
+//    }
+//    // .section-title {
+//    //   margin-bottom: 0;
+//
+//
+//    // }
+//    .testimonial-slider-wrapper {
+//      .slick-list {
+//        margin: 0 -12px;
+//        padding-top: 70px;
+//        padding-bottom: 120px;
+//
+//        @include sm {
+//          margin: 0;
+//          padding-bottom: 80px;
+//        }
+//        @include md {
+//          padding-bottom: 100px;
+//        }
+//        .testimonial-card {
+//          &.style-2 {
+//            box-shadow: none;
+//          }
+//        }
+//      }
+//      .slick-arrow {
+//        display: none !important;
+//      }
+//      .slick-slide {
+//        margin: 0 12px;
+//      }
+//    }
+//  }
+//}
+//// Faq Area
+//.faq-area {
+//  &.style-4 {
+//    padding: 120px 0;
+//
+//    @include sm {
+//      padding: 80px 0;
+//    }
+//    @include md {
+//      padding: 100px 0;
+//    }
+//  }
+//}
+//
+//// Latest Post Area
+//.latest-posts-area {
+//  &.style-3 {
+//    padding-top: 120px;
+//    padding-bottom: 110px;
+//
+//    @include sm {
+//      padding-top: 80px;
+//      padding-bottom: 30px;
+//    }
+//    @include md {
+//      padding-top: 100px;
+//      padding-bottom: 40px;
+//    }
+//
+//    .post-card {
+//      &.style-2 {
+//        @include sm {
+//          margin-bottom: 50px;
+//        }
+//        @include md {
+//          margin-bottom: 50px;
+//        }
+//      }
+//    }
+//  }
+//}
+
+//feature area
+.feature-area {
+    &.style-4 {
+        @include md {
+            padding: 100px 0;
+        }
+
+        @include sm {
+            padding: 80px 0;
+        }
+        .sec-content {
+            margin-bottom: 60px;
+            @include md {
+                margin-bottom: 40px;
+            }
+        }
+        .section-title {
+            margin-bottom: 0px;
+            flex-direction: column;
+            align-items: flex-start;
+
+            @include md {
+                margin-bottom: 0;
+            }
+
+            @include sm {
+                margin-bottom: 0;
+                gap: 0;
+            }
+            .title {
+                margin-bottom: 0;
+                br{
+                    @include md{
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .sec-desc {
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+
+//service area
+.service-area {
+    &.style-2 {
+        @include md {
+            padding: 100px 0;
+        }
+
+        @include sm {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+//CTA area start
+.cta-area {
+    &.style-3 {
+        padding-top: 80px !important;
+        padding-bottom: 74px !important;
+
+        .about-info-content {
+            @include sm {
+                text-align: center;
+            }
+        }
+
+        .section-title {
+            padding-left: 80px;
+            align-items: flex-start;
+            margin-bottom: 0;
+
+            @include md {
+                align-items: center;
+                padding-left: 0;
+                margin-bottom: 24px;
+            }
+
+            @include sm {
+                align-items: center;
+                padding-left: 0;
+            }
+
+            .title {
+                margin-bottom: 0;
+
+                @include lg{
+                    font-size: 44px;
+                    line-height: normal;
+                }
+            }
+        }
+        
+        .subscribe-form-widget  {
+            .mc4wp-form-fields {
+                gap: 10px;
+
+                @include sm{
+                    margin-top: 40px;
+                    justify-content: center;
+                    gap: 20px;
+                }
+            }
+            .single-field {
+               
+                input {
+                    border-right: initial;
+                    border: 1px solid rgba(255, 255, 255, 0.7019607843);
+                }
+            }
+            .submit-btn {
+                padding: 14px 24px;
+                letter-spacing: 1.28px;
+                font-weight: 700;
+            }
+        }
+        
+    }
+}
+
+//About us area
+.about-us-area {
+    &.style-4 {
+        overflow: hidden;
+        padding-top: 120px;
+        padding-bottom: 150px;
+
+        @include md {
+            padding-top: 100px;
+            padding-bottom: 120px;
+        }
+
+        @include xs {
+            padding-top: 80px;
+            padding-bottom: 0px;
+        }
+    }
+}
+
+//brand slider area
+.brand-slider-area {
+    &.style-3 {
+        padding: 0;
+    }
+}
+
+//Project area 
+.project-area {
+    &.style-1 {
+        padding-top: 120px;
+        padding-bottom: 30px;
+        overflow: hidden;
+
+        @include md {
+            padding: 100px 0;
+        }
+
+        @include sm {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 40px;
+
+            @include xs {
+                gap: 0;
+            }
+
+            .title {
+                @include sm {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .portfolio-slider {
+            .slick-list {
+                overflow: visible;
+
+                @include md{
+                    overflow: hidden;
+                }
+                @include sm{
+                    overflow: hidden;
+                }
+                @include xs{
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+}
+
+
+// Testimonial section
+.testimonial-slider-area {
+    &.style-3 {
+        padding-top: 115px;
+        padding-bottom: 150px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        position: relative;
+
+        @include xs {
+            padding: 80px 0;
+        }
+
+        .overlay {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0.8;
+            background-color: $black;
+            z-index: 2;
+        }
+
+        .container {
+            position: relative;
+            z-index: 5;
+        }
+
+        .slider-nav-btn-wrapper {
+            position: absolute;
+            top: 56%;
+            transform: translateY(-50%);
+            width: 100%;
+            z-index: 2;
+            display: flex;
+            justify-content: space-between;
+
+            @include sm {
+                display: none;
+            }
+
+
+            .slider-nav-prev-btn,
+            .slider-nav-next-btn {
+                width: 67px;
+                height: 67px;
+                flex-shrink: 0;
+                background: none;
+                border: 1px solid $primary-color;
+                color: $white;
+                font-size: 17px;
+                @include transition;
+
+                &:hover {
+                    background-color: $primary-color;
+                }
+            }
+        }
+
+        .testimonial-slider-wrapper {
+            .slick-arrow {
+                display: none !important;
+            }
+        }
+        .testimonial-card {
+            &.style-3{
+                @include md{
+                    gap: 30px;
+                }
+            }
+        }
+    }
+}
+
+// Counter Up
+.counter-up-area {
+    &.style-2 {
+        position: absolute;
+        width: 100%;
+        bottom: -72px;
+
+        @include md {
+            margin-bottom: -190px;
+        }
+
+        @include sm {
+            bottom: -90%;
+        }
+
+        @include xs {
+            position: initial;
+            margin-top: 60px;
+        }
+        
+    }
+}
+
+//latest post area
+.latest-posts-area {
+    &.style-3 {
+        @include md {
+            padding-top: 350px;
+            padding-bottom: 100px;
+        }
+
+        @include sm {
+            padding-bottom: 80px;
+            padding-top: 620px;
+        }
+
+        @include xs {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            margin-bottom: 30px;
+        }
+        .post-meta {
+            gap: 5px 30px;
+            @include lg{
+                gap: 10px;
+                flex-wrap: wrap ;
+            }
+        }
+        .post-card{
+            &.style-3{
+                .content{
+                    padding: 24px;
+                }
+            }
+        }
+    }
+}

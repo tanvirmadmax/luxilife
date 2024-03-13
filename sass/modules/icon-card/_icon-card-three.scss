@@ -1,0 +1,69 @@
+.icon-card {
+    &.style-3 {
+        padding: 0 72px;
+        background-color: $gray-100;
+
+        @include lg {
+            padding: 0 40px;
+        }
+        @include xs {
+            padding: 0 30px;
+        }
+
+        .icon-card-inner {
+            padding: 40px 0;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            &.active{
+                .image{
+                    transform: rotateY(360deg);
+                    @include transition;
+                    img{
+                    }
+                }
+                .content{
+                    .info-title{
+                        color: $primary-color;
+                    }
+                }
+            }
+            @include xs {
+                flex-wrap: wrap;
+            }
+
+            .content {
+                margin-right: 82px;
+
+                @include xl {
+                    margin-right: 0;
+                }
+                @include lg {
+                    margin-right: 0;
+                }
+                @include sm {
+                    margin-right: 0;
+                }
+            }
+
+            &:nth-child(even) {
+                border-top: 1px solid rgba(35, 38, 45, 0.3);
+                border-bottom: 1px solid rgba(35, 38, 45, 0.3);
+                
+            }
+
+            .image {
+                width: 65px;
+                height: 65px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-shrink: 0;
+                transform: rotate(0deg);
+                @include transition;
+                img{
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.about-info-card{
+    &.style-5{
+        margin-top: 31px;
+       
+        .about-info-content{
+            gap: 34px;
+            margin-right: 100px;
+
+            @include xl {
+                margin-right: 40px;
+            }
+            @include lg {
+                margin-right: 0;
+                gap: 20px;
+            }
+            @include md {
+                gap: 20px;
+            }
+            @include sm {
+                margin-right: 0;
+                gap: 20px;
+            }
+
+            .section-title{
+                .title{
+                    margin-bottom: 10px;
+                    @include lg {
+                        font-size: 44px;
+                    }
+                }
+            }
+        }
+        .btn-wrapper{
+            margin-top: 60px;
+            @include lg {
+                margin-top: 44px;
+            }
+            @include md {
+                margin-top: 44px;
+            }
+            @include sm {
+                margin-top: 40px;
+            }
+        }
+    }
+}

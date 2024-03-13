@@ -1,0 +1,148 @@
+.header-area {
+  &.style-5 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+
+    .logo-wrapper {
+      position: absolute;
+      left: 60px;
+      @include rmaxwd(991){
+        position: relative;
+        left: 0;
+      }
+      .logo{
+        .standard-logo{
+          @include rmaxwd(991){
+            display: none;
+          }
+        }
+        .sticky-logo{
+          @include rmaxwd(991){
+            display: block;
+          }
+        }
+      }
+    }
+    .header-menu-area{
+      @include rmaxwd(991){
+        background-color: $white;
+      }
+    }
+    .header-menu-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include lg{
+        justify-content: end;
+      }
+      .search-btn-with-btn {
+        gap: 60px;
+        align-self: stretch;
+        @include lg{
+          display: none;
+        }
+        .search-btn-wrapper {
+          .search-btn {
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            min-height: unset;
+          }
+        }
+        .btn-wrapper {
+          height: 100%;
+          align-self: stretch;
+          position: absolute;
+          right: 0;
+          top: 0;
+
+          .theme-btn {
+            height: 100%;
+            gap: 25px;
+
+            .icon {
+              font-size: 40px;
+            }
+            .btn-content {
+              display: flex;
+              flex-direction: column;
+              text-align: left;
+
+              .phone-number-label {
+                font-family: $body-font;
+                font-size: 14px;
+                font-weight: 400;
+              }
+              .phone-number {
+                font-size: 18px;
+              }
+
+            }
+          }
+        }
+      }
+    }
+
+    // Start Header Nav
+    .header-menu-area {
+      &.sticky_menu {
+        .main-menu {
+          ul {
+            li {
+              a {
+                color: $black;
+                @include transition;
+                padding: 27px 24px;
+
+                &:hover {
+                  color: $primary-color;
+                }
+              }
+              ul {
+                li {
+                  a {
+                    padding: 10px 20px;
+                    &:hover {
+                      color: $white;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .main-menu {
+        ul {
+          li {
+            a {
+              color: $white;
+              @include transition;
+              padding: 51px 24px;
+
+              &:hover {
+                color: $primary-color;
+              }
+            }
+            ul {
+              li {
+                a {
+                  padding: 10px 20px;
+                  color: $black;
+
+                  &:hover {
+                    color: $white;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

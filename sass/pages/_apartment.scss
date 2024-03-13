@@ -1,0 +1,99 @@
+.book-appointment-area{
+    .comment-respond{
+        margin-top: 0;
+        .theme-btn{
+            margin-top: 10px;
+        }
+        .contacts-message{
+            margin-bottom: 25px;
+        }
+    }
+    h5{
+        margin-bottom: 10px;
+    }
+    .single-checkbox{
+        margin-bottom: 30px;
+    }
+    .form-check{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 5px;
+        input[type="radio"]{
+            background-image: none !important;
+            border-radius: 50px !important;
+            background-color:   $gray-100 !important;
+            border-color: transparent !important;
+            &:before{
+                border-radius: 50px;
+                transform: scale(1);
+                background-color: $gray-200;
+            }
+            &:checked{
+                &:before{
+                    background-color: $primary-color !important;
+                }
+            }
+        }
+        span{
+            flex-shrink: 0;
+        }
+        .form-check-input{
+            width: auto;
+            height: auto;
+            border: none;
+            flex-direction: column;
+            gap: 5px;
+
+            &:active{
+                filter: none;
+            }
+        }
+    }
+}
+.apartment-details{
+    @include rmaxwd(991){
+        margin-top: 60px;
+    }
+    h3{
+        margin-bottom: 17px;
+        @include sm{
+            font-size: 27px;
+        }
+    }
+    h4{
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    p{
+        margin-bottom: 20px;
+    }
+    .image-wrapper{
+        margin-bottom: 30px;
+    }
+    .list-item{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        i{
+            color: $primary-color;
+            font-size: 16px;
+            @include sm{
+                margin-top: 16px;
+            }
+        }
+        @include sm{
+            align-items: start;
+        }
+        h4{
+            @include sm{
+                font-size: 21px;
+            }
+        }
+    }
+    p{
+        &:last-child{
+            margin-bottom: 0;        
+        }
+    }
+}

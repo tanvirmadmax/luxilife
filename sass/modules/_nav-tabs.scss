@@ -1,0 +1,28 @@
+.nav-tab {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    @include rmaxwd(1199) {
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    li {
+        .theme-btn{
+            background: none;
+            color: $black;
+            @include transition;
+        }
+        &.active {
+            .theme-btn{
+                background-color: $primary-color;
+                color: $white;
+                @include transition;
+            }
+        }
+    }
+}

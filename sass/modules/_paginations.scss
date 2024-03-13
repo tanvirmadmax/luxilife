@@ -1,0 +1,118 @@
+.wp-block-query-pagination,
+.navigation.posts-navigation,
+.comment-navigation {
+  display: flex;
+  align-items: center;
+
+  .wp-block-query-pagination-numbers {
+    width: inherit;
+  }
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+  .wp-block-query-pagination-previous,
+  .wp-block-query-pagination-next,
+  .nav-next a,
+  .nav-previous a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $text-color;
+    background-color: $white;
+    //border-radius: 6px;
+    height: 53px;
+    padding: 0 20px;
+    @include transition;
+    font-size: 18px;
+    font-weight: 500;
+    border: 1px solid $gray-300;
+    text-transform: capitalize;
+
+    @include rmaxwd(767) {
+      height: 40px;
+    }
+
+    &:hover {
+      background: $primary-color !important;
+      color: $white;
+      border-color: $primary-color;
+      @include transition;
+    }
+  }
+
+}
+
+.basic-pagination,
+.page-links,
+.wp-block-query-pagination-numbers {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+
+  ul {
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    justify-content: center;
+
+    li {
+      padding-top: 0;
+    }
+    .prev,
+    .next
+    {
+      span {
+        display: none;
+      }
+    }
+  }
+  .post-page-numbers {
+    background-color: rgba(71, 112, 247, 0.1) !important;
+  }
+  .page-numbers,
+  .post-page-numbers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $black;
+    background-color: rgba(217, 161, 76, 0.1);
+    border-radius: 50%;
+    height: 67px;
+    width: 67px;
+    @include transition;
+    font-size: 24px;
+    font-weight: 700;
+    //border: 1px solid $gray-300;
+    text-transform: capitalize;
+    font-family: $heading-font;
+
+    @include rmaxwd(767) {
+      width: 40px;
+      height: 40px;
+      font-size: 16px;
+    }
+    &:hover {
+      background: $primary-color !important;
+      color: $white;
+      //border-color: $primary-color;
+      @include transition;
+    }
+
+    &.current {
+      background: $primary-color !important;
+      color: $white;
+      //border-color: $blue-color;
+      @include transition;
+    }
+
+  }
+}

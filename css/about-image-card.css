@@ -1,0 +1,59 @@
+.about-image-section {
+  display: flex;
+  gap: 24px;
+}
+.about-image-section .image-card-left {
+  position: relative;
+}
+.about-image-section .image-card-left img {
+  width: 276px;
+  height: 438px;
+  position: relative;
+  z-index: 5;
+}
+.about-image-section .image-card-left .about-btn-card {
+  width: 480px;
+  height: 388px;
+  background-color: #f0e8db;
+  position: absolute;
+  z-index: 2;
+  bottom: 29px;
+  left: 40px;
+}
+.about-image-section .image-card-left .about-btn-card .about-btn {
+  width: 199px;
+  height: 135px;
+  text-align: center;
+  background-color: #D9A14C;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-bottom: 26px;
+  margin-left: 37px;
+}
+.about-image-section .image-card-left .about-btn-card .about-btn h2 {
+  font-family: Rajdhani;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 60px;
+  color: #FFFFFF;
+}
+.about-image-section .image-card-left .about-btn-card .about-btn p {
+  font-size: 16px;
+  font-family: Rubik;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+.about-image-section .image-card-right {
+  margin-top: 36px;
+}
+.about-image-section .image-card-right img {
+  width: 300px;
+  height: 613px;
+  position: relative;
+  z-index: 5;
+}

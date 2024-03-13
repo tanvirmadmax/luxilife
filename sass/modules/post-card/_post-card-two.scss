@@ -1,0 +1,105 @@
+.post-card {
+  &.style-2 {
+    flex-direction: column;
+    gap: 26px;
+    @include transition;
+
+    .content-wrapper {
+      position: relative;
+      z-index: 1;
+      margin-right: 30px;
+      margin-top: -66px;
+      @include transition;
+
+      @include md {
+        margin-right: 0;
+        margin-top: 0;
+      }
+      @include xs {
+        margin-right: 0;
+        margin-top: 0;
+      }
+    }
+
+    &:hover {
+      .content-wrapper {
+        .content {
+          border-color: transparent;
+          border-bottom-color: $primary-color;
+          box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
+          @include transition;
+          &:after{
+            transform: scale(1);
+          }
+          .btn-wrapper {
+            .theme-btn {
+              background-color: $primary-color;
+              color: $white;
+              @include transition;
+
+              i {
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .image {
+      height: 300px;
+
+      @include sm {
+        height: 300px;
+      }
+    }
+    .content{
+      padding: 20px 30px 40px;
+      gap: 20px;
+      background-color: $white;
+      &:after{
+        content: "";
+        background-color: #FF9205;
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: scaleX(0);
+        @include transition;
+
+      }
+
+      .btn-wrapper {
+        margin-top: 10px;
+
+        .theme-btn {
+          background-color: $white;
+          color: $black;
+          @include transition;
+
+          i {
+            color: $primary-color;
+            @include transition;
+          }
+        }
+      }
+    }
+    .post-meta {
+      gap: 30px;
+      @include md {
+        justify-content: space-between;
+      }
+      @include xs {
+        justify-content: space-between;
+        gap: 0;
+      }
+
+      .single-post-meta{
+        i{
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
