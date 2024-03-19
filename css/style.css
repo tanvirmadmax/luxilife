@@ -7692,6 +7692,7 @@ body.admin-bar .header-area.style-7 {
 }
 .about-info-card.style-3 .about-info-content .section-title {
   gap: 0;
+  margin-bottom: 20px;
 }
 .about-info-card.style-3 .about-info-content .list-item-wrapper {
   gap: 30px;
@@ -15362,7 +15363,6 @@ ul.children {
 
 .product-area {
   padding-top: 120px;
-  padding-bottom: 35px;
 }
 @media (max-width: 1399px) {
   .product-area {
